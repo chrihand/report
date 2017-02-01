@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\input{docsetup.tex}
+
+\begin{document}
+
+\input{frontpage.tex}
+
+\input{tableofcontent.tex}
+
+\input{chapters/chapter1-introduction/introduction.tex}
+
+
+\phantomsection
+
+% Adds the references to the table of content
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\nocite{*}
+\bibliography{references.bib}
+
+\end{document}
