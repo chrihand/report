@@ -1,22 +1,36 @@
-\documentclass{article}
+%% Master Thesis Template
+%% Please update the specification through this link: https://daim.idi.ntnu.no/howto_thesis_submission.pdf
+
+\documentclass[pdftex,10pt,b5paper,twoside]{book}
+\usepackage[lmargin=25mm,rmargin=25mm,tmargin=27mm,bmargin=30mm]{geometry}
 
 \input{docsetup.tex}
 
 \begin{document}
 
+%% PART 0
+%% Frontpage
 \input{frontpage.tex}
 
-\input{tableofcontent.tex}
+%% PART 1
+%%The title page will be automatically generated and added by the DAIM system
+\input{dedication.tex}		%% Optional
 
-\input{chapters/chapter1-introduction/introduction.tex}
+%% PART 2
+\input{abstract.tex}		%% Optional
+\input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
+\input{abbreviations.tex}	%% Optional
 
+%% PART 3 -- The Chapters
+\input{chapters/1-Introduction/chapter1.tex}		%% Edit each chapter
+\input{chapters/2-Prestudies/chapter2.tex}
+\input{chapters/3-ProcessAndMethodology/chapter3.tex}
+\input{chapters/4-Requirements/chapter4.tex}
+\input{chapters/5-ArchitectureAndImplementation/chapter5.tex}
+\input{chapters/6-Testing/chapter6.tex}
 
-\phantomsection
-
-% Adds the references to the table of content
-\addcontentsline{toc}{section}{References}
-\bibliographystyle{plain}
-\nocite{*}
-\bibliography{references.bib}
+%% PART 4
+\input{references/bibliography.tex}	%% Edit your references in "mylib.bib"
+\input{appendix/appendix.tex}		%% Optional
 
 \end{document}
