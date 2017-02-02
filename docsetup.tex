@@ -23,7 +23,13 @@
 %\usepackage[intoc]{nomencl}
 %\renewcommand{\nomname}{List of Abbreviations}
 %\makenomenclature
-\usepackage{natbib} %Fix bib
+
+\usepackage[
+    backend=biber,
+    style=ieee
+]{biblatex}
+\addbibresource{references.bib}
+
 \usepackage{float}
 %\floatstyle{boxed} 
 \restylefloat{figure}
