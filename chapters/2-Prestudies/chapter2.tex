@@ -2,27 +2,117 @@
 
 \chapter{Prestudies}
 
+
 \section{Customer input}
+During the first meeting with the customer, the group received input about the overall structure of the desired product, as well as the research required. The customer emphasized the fact that the project is a “Proof of Concept”, and that the group had to research utilizing universal design principles in web applications. The application to be developed is purposed to be used in Trondheim municipality, with the possibility to be scaled up to a bigger user group. Therefore both server development and graphical user interface is necessary for this project. Customer input had an impact on the group's choice of technology. 
 
-\section{Inspiration}
+The application was meant to be used in Trondheim municipality by Trondheim Kommune to easily allow parents and youths to find, participate and master recreational activities. This user base represented a big group of users, and the project was therefore allocated resources to perform workshops and user tests. Such test would be prior for a successful application and project. 
 
-\section{Workshop With User and Customers }
+The goal of the project is to create a web portal for the users and with the users. Therefore the users are going to be participating during the whole development process.
 
-\section{Universal Design}
+\section{Alternative Solutions}
+The user group for this product, does not have many alternative solutions to choose from today. In Trondheim there are just a few solution available, but nationally there are several solutions located around the country.
 
-\section{Inspiration}
+In Trondheim TRDevents \cite{TRDevents} is the biggest portal to view activities and other arrangements. 
+
+In Trondheim is KUBA \cite{KUBA}. KUBA stands for "Kultur for Barn" (Culture for children), and is Trondheim municipality's cultural program for children in all ages. KUBA strives to be as diverse and as inclusive as possible such that everyone can participate in their activities.
+
+A more national offer is Beitostølen Helsesportsenter(denoted as BHSS) \cite{BHSS}. BHSS gives people in all ages with physical, psychological and / or cognitive disabilities the opportunity to rehabilitation through activities. The rehabilitation takes place at their center in Beitostølen located in Øystre Slindre municipality. Their main focus is opportunities rather than limitations.  
 
 \section{Tools}
+The following section will contain information about all tools used in this project, including both tools for communication, document sharing, project planning and organization and project development.
+
 \subsection{Slack}
-\subsection{Mail}
-\subsection{toggl}
-\subsection{Waffle.io}
+The group has chosen Slack \cite{Slack} as the main communication channel within the group. Slack allows members to create distinct threads, were discussions about different subjects can be discussed. This makes communication easier and cleaner, compared to other chat-applications like Facebook Messenger. Slack also provide great integration with GitHub, which means Slack will keep group members updated on all changes at the group's GitHub repository. 
+
+\subsection{Email}
+The selected communication channel between the group and the group supervisor and the customer was email.
+Email was chosen because it is easy to maintain, sender and receiver have their own copies. Another factor that made email the selected channel, instead of SMS or other messaging service, is the fact that everyone uses email daily, and has incorporated routines to checking email and messaging. Also the possibility to send attachments, categorise on subject and has unlimited amount of characters has been a motivation to use email.  
+
+\subsection{Toggl}
+Toggl \cite{Toggl} is chosen as the group's time tracking tool. It makes it easy to track time, and specify what each group member are working on. Toggl provides great visualization of time spent on different tasks, with different types of charts and diagrams. It is also open for the entire group, which means every group member can see what other members are working on. Toggl also uses tags so it is easy to divide and group tasks. This allows for tracking progress and what type of tasks is most time consuming.
+
+
 \subsection{Git}
+Git \cite{Git} is a open source, version control system, which allows teams to work on projects that are small or big with speed and efficiency. Git is a tool to manage project source code history and replaces SCM tools, because of cheap local branching, convenient staging areas, and multiple workflows.
+
 \subsection{GitHub}
-\subsection{Google Docs}
+GitHub\cite{GitHub} is a hosting service for distributed revision- and version control systems. GitHub offers source code management (SCM) functionality, access control and many more collaboration and project features. Such as wiki-pages, task management tools, and different types of repositories for your projects such as public and private. The groups decision to use Github was based on that fact, that the customer demanded that the project is open source, and hosted on Github. 
+
+\subsection{Waffle.io}
+The group has chosen Waffle.io \cite{Waffle} as the main task manager tool. The entire product backlog and all sprint backlogs, are managed with Waffle.io. Waffle has great integration with GitHub, and will automatically syncronize tasks with issues on GitHub. Waffle.io also provides the opportunity to create burndown-charts in relation to the work accomplished in Waffle.io or at GitHub. This is the main reason for why the group chose to work with Waffle.io compared to other known tools like Trello. 
+
+\subsection{Django}
+\subsection{Python}
+\subsection{React}
+
+\subsection{PyCharm(?)}
+\subsection{Database(CHANGE NAME WHEN DECIDED)}
+\subsection{Test framework(?)}
+
+\subsection{Google Drive}
+For document sharing, the group chose to use Google Drive \cite{GoogleDrive}. Google Drive has a great way to share documents and information between a group. It also allows the group members to write in the same document, and edit the same files in real time. That makes it easy for all members to collaborate. Google Drive was mainly chosen because of the easy collaboration opportunities, which other competitors like Dropbox or OneDrive does not support. 
+
 \subsection{ShareLaTeX and LaTeX}
-\subsection{}
+ShareLatex \cite{ShareLatex} is an online editor for writing documents, which allows collaborative work in real time. Latex is a typesetting system, created for writing scientific and technical papers. 
+
+The group selected Latex and ShareLatex due to the fact that it is easy to construct and maintain the paper, even when the paper becomes large. Here Latex are a better choice than for example Google Docs.  
 
 \section{Risk Analysis}
+
+The risk analysis was originally created during sprint iteration 0. The cases and their values were mainly based on previous experience from other projects. Then they were adapted to this project by thoroughly going though each case collaboratively, doing new evaluations.
+
+Cases are ranked from 1: Minimal likelihood but may occur, to 9: Very likely. They are also sorted on importance descending.
+\begin{longtable}{@{\extracolsep{\fill}}|L{0.14\linewidth}
+                |L{0.09\linewidth}
+                |L{0.09\linewidth}
+                |L{0.14\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+\hline
+
+
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood (1-9)} & \textbf{ Impact (1-9)} & \textbf{Importance {\footnotesize (Likelihood * Impact)}} & \textbf{Preventive Action}    & \textbf{Remedial Action} \\ \hline
+
+
+Conflicts in group & 7 & 7 & 49 & Talk together, give constructive feedback & Try to resolve it with a neutral third party \\
+\hline
+Unrealistic goals & 7 & 6 & 42 & Talk to customer, be realistic & Be flexible and change goals \\
+\hline
+Falling Behind Schedule & 6 & 6 & 36 & Daily stand-up meetings, be efficient at meetings, have scheduled meetings & Re-estimate workload, increase work hours \\
+\hline
+Sickness & 8 & 4 & 32 & Eat healthy, be hygienic & Stay at home, if possible work from home \\
+\hline
+Technical challenges & 5 & 6 & 30 & Think ahead, test early, build modular & Reconsider technical choices, contact people with knowledge \\
+\hline
+Lack of knowledge & 9 & 3 & 27 & Be prepared, read up on topic/tech & Ask for help, read about the topics we miss knowledge about \\
+\hline
+Merge conflicts & 8 & 3 & 24 & Always pull from master before branching & Solve it, run unit tests after resolving conflict \\
+\hline
+Absent customer & 3 & 7 & 21 & Have scheduled meetings & Refer to customer contract \\
+\hline
+Lack of communication in group & 5 & 4 & 20 & Slack and meetings & Talk to group representative \\
+\hline
+Lack of Responsibility & 3 & 6 & 18 & Daily stand-up meetings, follow up on given tasks, collaborative work hours & Group leader’s responsibility to follow up \\
+\hline
+Inefficient meetings & 8 & 2 & 16 & Follow the agenda for the meeting, strict group leader, bring coffee & Take breaks \\
+\hline
+Late Arrivals & 8 & 2 & 16 & Give reminders, use the calendar & Cake punishment, contact supervisor if it repeats \\
+\hline
+Data loss & 2 & 6 & 12 & Save often, use git, commit and push often, have local copies & Increase workload, redo work \\
+\hline
+Poor execution of methodology & 4 & 3 & 12 & Strict group leader, scrum master, quick recap of methodology & Recap of methodology \\
+\hline
+Absence & 2 & 5 & 10 & Give reminders, use the calendar & Cake punishment, contact supervisor if it repeats \\
+\hline
+Disagreement of priorities & 5 & 2 & 10 & Everyone gets the opportunity to say what they mean & Talk to customer \\
+\hline
+Loss of group members & 1 & 9 & 9 & Group representative, social activities & Distribute workload equally over the entire team, adjust goals of project \\
+\hline
+
+\caption{Risk analysis}
+\label{fig:risk_analysis}
+\end{longtable}
 
 \cleardoublepage

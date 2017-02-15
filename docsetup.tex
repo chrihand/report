@@ -2,11 +2,13 @@
 \usepackage{pdfpages}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{amsthm}
 \usepackage{amsmath}
-\usepackage{color}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
 \usepackage[Lenny]{fncychap}
 \usepackage[pdftex,bookmarks=true]{hyperref}
 \usepackage[pdftex]{hyperref}
@@ -53,3 +55,12 @@
 \renewcommand{\headrulewidth}{0.1ex}
 \renewcommand{\footrulewidth}{0.1ex}
 \fancypagestyle{plain}{\fancyhf{}\fancyfoot[LE,RO]{\thepage}\renewcommand{\headrulewidth}{0ex}}
+
+
+%Added after report started:
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+
+%Columntype to left-justify text and still decide box-width
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
