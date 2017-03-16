@@ -4,15 +4,15 @@
 
 \section{Minimum Viable Product}
 \label{MVP}
-The group represents their commitment and shared goal by specifying a definition of the minimum viable product that they are to deliver when the project deadline is due.
+The group represents their commitment and shared goal by specifying a definition of the Minimum Viable Product (denoted as MVP) that they are to deliver when the project deadline is due.
 
-The Minimal Viable Product (denoted as MVP) the group is to deliver is a web portal with a homepage, an overall activity page, admin and user profile pages. The Web portals home page presents upcoming events to the user. The portal is a user account service - meaning the events the homepage presents depends on the user logged in, such as 'my events'  if the user are hosting some. The portal will have an page that displays all the registered events, and allows for search and filtering. 
-The design of the portal, will be under the WCAG 2.0.
+The Minimal Viable Product the group is to deliver is a web portal with a homepage, an overall activity page, admin and user profile pages. The Web portals home page presents upcoming events to the user. The portal is a user account service - meaning the events the homepage presents depends on the user logged in, such as 'my events'  if the user are hosting some. The portal will have an page that displays all the registered events, and allows for search and filtering. 
+The design of the portal, will be under the WCAG 2.0, rules for universal design.
 
 \section{Functional requirements}
 \subsection{User Stories}
 \label{User stories}
-The group were asked to create user stories, but for the group to have a common understanding of how to define a story as ready or done the group created some criterias. 
+The group were asked to create user stories. To have a common understanding of how to define a story as ready or done the group created some criterias. 
 
 \begin{description}
     \item[When a user story are ready:]
@@ -37,27 +37,96 @@ the design is approved by the responsible person on design, Ingrid Skar
     \item A user story is done when Functional testing is done
 \end{itemize}
 
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.10\linewidth}
+                |L{0.33\linewidth}
+                |L{0.33\linewidth}
+                |L{0.10\linewidth}|@{}}
+\hline
+\rowcolor{Gray}
+\textbf{ID} & \textbf{User Story} & \textbf{Acceptance criteria} & \textbf{Priority} \\
+\hline
+US.00 & \textbf{As a} user, \textbf{I want} to see upcoming activities \textbf{So that I can} get an overview of my opportunities & The user can view the front page. The front page shows activities that a user can attend.& 100\\
+\hline
+US.01 & \textbf{As a} user, \textbf{I want} to see promo(video / pictures) of the activities \textbf{So that I can} see the purpose of the activity and what equipment is necessary, etc & & 100 \\
+\hline
+US.02 & \textbf{As a} user, \textbf{I want} experience a web-society feeling \textbf{So that I can} invite friends, see participating friends, share, etc. & Needs to be tested with users. & 80 \\
+\hline
+US.03 & \textbf{As a} user, \textbf{I want} to be able to log in \textbf{So that I can} sign up for events and see my personal page & A user must be able to log in. Get feedback after logged in. Stay logged in after refreshing page. Be able to log out. & \\
+\hline
+US.04 & \textbf{As a} user, \textbf{I want} a personal page \textbf{So that I can} see my upcoming activities & Be able to see personal information about myself. See the activities I have signed up for. & \\
+\hline
+US.05 & \textbf{As a} user, \textbf{I want} to be able to easily navigate between subpages on the webpage \textbf{So that I can} browse the webpage efficient & Navigation bar should be fully functional. Refreshing the webpage should not change the webpage. & \\
+\hline
+US.06 & \textbf{As a} user, \textbf{I want} to see as many activities as possible, not limited to one actor such as the municipality \textbf{So that I can} get an overview of my opportunities & & 100 \\
+\hline
+US.07 & \textbf{As a} user, \textbf{I want} to get a personalized view of activities \textbf{So that I can} get an overview of opportunities that fits me & Needs to be tested with users,. & 80 \\  
+\hline
+
+CH.00 & \textbf{As a} child, \textbf{I want} see relevant activities for me \textbf{So that I can} get an overview of my opportunities & & 70 \\
+\hline
+CH.01 & \textbf{As a} child, \textbf{I want} an overview of activities I am attending \textbf{So that I can} schedule my life & & 90\\
+\hline
+CH.02 & \textbf{As a} child, \textbf{I want} a place to communicate with others \textbf{So that I can} plan activities, that aren't available & Needs to be tested with users & 60 \\
+\hline
+CH.03 & \textbf{As a} child, \textbf{I want} to see all activities \textbf{So that I can} see what activities are available & The user should be able to view all activities & 100 \\  
+\hline
+
+
+PA.00 & \textbf{As a} parent, \textbf{I want} to see relevant activities for my child \textbf{So that I} see if it’s suitable for my child & & 100 \\
+\hline
+PA.01 & \textbf{As a} parent, \textbf{I want} to see all activities for my region in one place \textbf{So that I} don’t have to search the entire internet & & 100 \\
+\hline
+PA.02 & \textbf{As a} parent, \textbf{I want} to add activities I know about \textbf{So that I can} help others and to improve the selection of activities & & 90\\
+\hline
+PA.02 & \textbf{As a} parent, \textbf{I want} to give constructive feedback on what did/not work \textbf{So that} other parents can filter out activities & 80 \\
+\hline
+PA.03 & \textbf{As a} parent, \textbf{I want} to give constructive feedback on what did/not work \textbf{So that} other parents can filter out activities & & 70\\
+\hline
+PA.04 & \textbf{As a} parent, \textbf{I want} to explicit know how many “assistants” there are \textbf{So that I} know if my child will be taken care of, helped and included. & 100\\
+\hline
+PA.05 & \textbf{As a} parent, \textbf{I want} know how many participants / groups there are \textbf{So that I can}  know if there are many participants, but their divided into smaller groups, etc. & & 70\\
+\hline
+PA.06 & \textbf{As a} parent, \textbf{I want} have a informal contact channel \textbf{So that I can} quick and easy ask questions directly to the provider & Depends on whether the activity has a hotline that works & 100 \\
+\hline
+PA.07 & \textbf{As a} parent, \textbf{I want} have access to more indepth information about an activity than my child \textbf{So that I can} figure out if the activity is suitable for my child & Navigation back and forward between the pages works. More information should be given at the “in depth” page. & 80 \\  
+\hline
+\caption{User Stories}
+\label{User story}
+\end{longtable}
+
+
 
 \subsection{User Cases}
 \label{User cases}
-
+ 
 \section{Non-functional requirements}
-\subsection{Universal Design}
-\label{universalDesign}
-
 \subsection{Open Source}
-Open source means that the source code to data program is made available to everyone, usually on the Internet. Open source code can be published under many different licence agreements.
+Open source means that the source code to the data program is made available to everyone, usually on the Internet. Open source code can be published under many different licence agreements.
 
 \subsubsection{Apache2 Licence agreement}
-The customer required that the product was published as open source under the licence Apache2 \cite{apache2}.
-Apache2 is a licence that doesn't restrict the use of the source with much. The source code is available to all, and can be reused, further developed, distributed, and much more, as long as the required notices with the source code follows it wherever the source code goes. 
+The customer required that the product was published as open source under the licence Apache2 \cite{apache2}. Apache2 is a licence that does not restrict the use of the source with much. The source code is available to all, and can be reused, further developed, distributed, and further more as long as the required notices with the source code maintained. 
 
-The notices has to be in a file called NOTICE and be a text file, that the work includes as part of its distribution.
+The notices has to be in a text file called NOTICE, that the work includes as part of its distribution.
 
-\subsection{Security - Privacy}
 
-\subsection{Scalability, Long Term Goal}
+\subsection{Server Availability}
 
+\subsection{Privacy}
+
+\subsection{Universal Design}
+\label{universalDesign}
+"Universal design means designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible, regardless of disability." \cite{Difi} Designing the web-portal according to the universal design principles was one of the most specific requirements from the customer. As the intentional user group of skalvi.no is children with special needs, the group aimed to design the web-portal following these principles. 
+
+
+\subsection{Scalability}
+It will be a long term goal.
+
+\section{Changes to Requirements}
+
+\subsubsection{Additions}
+
+\subsubsection{Removals}
 
 
 \cleardoublepage
