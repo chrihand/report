@@ -3,41 +3,111 @@
 \chapter{Testing}
 
 \section{Test strategy}
-The goal is to deliver a product with high quality and that works according to the given requirements. Therefor the group aims to test most parts of the product using acceptance testing. Acceptance testing is testing the requirements and that the product satisfies the users needs \cite{acceptanceTesting}. The groups chose this testing method, because this was the only testing method the customer wanted the group to spend time on.
+The goal is to deliver a product with high quality and that works according to the given requirements. Therefor the group aims to test most parts of the product using acceptance testing. Acceptance testing is testing the requirements and that the product satisfies the users needs \cite{acceptanceTesting}. The group will use the focus group which is as acceptance method. Focus group is a form of qualitative research consisting of interviews in which the participants are asked about their perceptions, opinions, beliefs, and attitudes towards the product, service, concept, and idea \cite{focusGroup}. The testing method were chosen by the customer.
+
 
 \subsection{Test plan}
-The group decided to create a test plan, see table \ref{Test plan}  to get an overview of what types of acceptance tests were to be performed during the project and to what time.
+The group decided to create a test plan (see table \ref{Test_Plan}) to get an overview of what types of acceptance tests were to be performed during the project and to what time.
 
-The customer wanted to include the users as much as possible during the development process. This was done to get feedback on the usability and the functionality. Therefore the test plan includes the acceptance tests. The acceptance tests, \ref{Test cases}, are based on the user cases, see chapter \ref{User cases}.
+The customer wanted to include the users as much as possible during the development process. This was done to get feedback on the usability and the functionality. Therefore the test plan includes tests cases. The tests (see appendix \ref{test_cases}) are based on the user cases (see \ref{User cases}).
 
-\begin{longtable}{|l|l|}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.20\linewidth}
+                |L{0.55\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
 \hline
 \rowcolor{Gray}
-\textbf{Dates} & \textbf{Test cases to be tested} \\
+\textbf{Dates} & \textbf{Test cases to be tested} & \textbf{Test status} \\
 \hline
-13.03 - 17.03 (Sprint 3) & UCXX, UCXX,   \\
+20.03 - 24.03 (Sprint 3) & Pre workshop: TC1, TC2, TC3, TC4, TC5, TC6, TC7, TC8 &  \\
 \hline
-20.03 - 24.03 (Sprint 3) & Workshop with users, free testing\\
+27.03 - 30.03 (Sprint 4) & Workshop with users: TC1, TC2, TC3, TC4, TC5, TC6, TC7, TC8 & \\
 \hline
-24.04 (Sprint 5) & All test cases \\
+24.04 (Sprint 5) & Post workshop: TC1, TC2, TC3, TC4, TC5, TC6, TC7, TC8 & \\
 \hline
-15.05 - 19.05 (Sprint 7) & Final test, test all cases  \\
+15.05 - 19.05 (Sprint 6) & Final test & \\
 \hline
 \caption{Test plan}
-\label{Test plan}
+\label{Test_Plan}
 \end{longtable}
 
 
+\section{Acceptance Testing}
+\textit{"After the system test has corrected all or most defects, the system will be delivered to users or customer for Acceptance Testing or User Acceptance Testing"} \cite{acceptanceTestingDefinition}.
+The group discussed how and what to test during multiple meetings with the customer. The customer prioritized User Acceptance Test over other tests, such as unit tests and end-to-end system tests. Since the product was a "proof of concept", the most important side of the product was not the functionality and logic, but to show the opportunities of such a product, and validate if it is something potently user wanted. The User Acceptance tests was conducted as a workshop with focus group testing. The Acceptance tests goals was to show a small group of users types the potential features the product could have, and get valuable feedback on what is working, not working, missing or not going to be used, for such a product to be successful. The tests was conducted before the product was product was ready to be produced, thus the feedback was used to improve product before final release.
+
 \subsection{Focus Group}
+During the third sprint, the group designed and prepared two workshops, one for each main user type, provider and family. The workshops was held during sprint 4, with collaboration with the customer. The customer provided pizza for the later group, and provided facilitation. The workshops was held to conduct focus group tests. During the focus group questions are asked in an interactive group setting where the participants where free to talk among them selves. During the focus group, the group took notes and recorded the vital points gotten from the participant discussions.
+
+The notes taken during the workshop gave valuable insights, such as how to design the filtration and search interface. Further insights was regarding the design and requirements needed to prove the "proof of concept" successful. 
 
 \subsubsection{Children And Parents}
 
 \subsubsection{Activity Providers And System Maintainers}
 
-
-\subsection{Acceptance Test}
-\subsubsection{Test cases}
+\subsection{Test cases}
 \label{Test cases}
+For the focus group test cases were created (see appendix \ref{test_cases}). 
+
+\subsubsection{Children And Parents}
+
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.10\linewidth}|@{}}
+\hline
+\rowcolor{Gray}
+\textbf{ID}\\
+\hline
+TC1 \\
+\hline
+TC2\\
+\hline
+TC3 \\
+\hline
+TC4 \\
+\hline
+TC5 \\
+\hline
+TC6 \\
+\hline
+TC7 \\
+\hline
+\caption{Test case tested with children and parents}
+\label{TC for CH and PA}
+\end{longtable}
+
+
+
+
+
+
+\subsubsection{Activity Providers And System Maintainers}
+
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.10\linewidth}|@{}}
+\hline
+\rowcolor{Gray}
+\textbf{ID}\\
+\hline
+TC1 \\
+\hline
+TC2\\
+\hline
+TC4 \\
+\hline
+TC6 \\
+\hline
+TC7 \\
+\hline
+TC8 \\
+\hline
+\caption{Test case tested with activity providers and system maintainers}
+\label{TC for PR and SM}
+\end{longtable}
+ 
+
+
+
 
 
 \section{Test Execution}

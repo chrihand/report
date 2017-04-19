@@ -4,6 +4,7 @@
 
 
 \section{Customer input}
+\label{Customer input}
 During the first meeting with the customer, the group received input about the overall structure of the desired product, as well as the research required. The customer emphasized the fact that the project is a “Proof of Concept”, and that the group had to research utilizing universal design principles in web applications.
 
 The application to be developed is purposed to be used in Trondheim municipality, with the possibility to be scaled up to a bigger user group. Trondheim municipality wishes to easily allow parents and youths to find, participate and master leisure activities. This user base represented a big group of users, and the project was therefore allocated resources to perform workshops and user tests. Such test would be prior for a successful application and project.
@@ -26,6 +27,7 @@ A more national offer is Beitostølen Helsesportsenter (further denoted as BHSS)
 
 
 \section{Development process}
+The group chose to utilize scrum as their development process. Because of frequent meetings with the customer and changes to customer requirements, scrum was best suited to the project.  The entire group also had previous experience with scrum, which made it the best choice.
 
 \section{Tools}
 \label{tools}
@@ -63,7 +65,7 @@ ShareLatex \cite{ShareLatex} is an online editor for writing documents, which al
 The group selected Latex and ShareLatex due to the fact that it is easy to construct and maintain the document, even when the document becomes large. Here Latex are a better choice than for example Google Docs. The group also chose Latex, because of the possibility to store back-ups in GitHub and Dropbox.
 
 \subsubsection{PyCharmIDE}
-PyCharm\cite{PyCharm} is a professional Integrated Development Environment for professional Python developers. The group chose to use PyCharm, because it helped produce code more effectively. The entire group also got professional edition version of PyCharm, which makes it the best tool for developing rapid with Python, and has great support for Django. 
+PyCharm\cite{PyCharm} is a Integrated Development Environment for professional Python developers. The group chose to use PyCharm, because it helped produce code more effectively, and provided good error checking. The entire group also used the professional edition of PyCharm, providing additional support for web development and the Django framework, resulting in an IDE supporting the entire project.
 
 \subsection{Front End}
 \subsubsection{React}
@@ -71,23 +73,24 @@ For front end development the group chose to use components defined in React \ci
 
 \subsubsection{Redux}
 \label{redux}
-To ensure the application behaved consistently the group decided to use Redux. "Redux is a predictable state container for JavaScript apps" \cite{Redux}. By using Redux the group managed to cope with mutations and asynchronicity, and manage the state of the data in the application. The group utilised Redux with the React components, and it was principally used to filter the activities presented to the users.  
+To ensure the application behaved consistently the group decided to use Redux. "Redux is a predictable state container for JavaScript apps" \cite{Redux}. By using Redux the group managed to cope with state mutations and asynchronicity, and manage the state of the data in the application. The group utilised Redux with the React components, and it was principally used to filter the activities presented to the users.  
 
 \subsubsection{Bootstrap}
 Another tool used for front end development is Bootstrap \cite{Bootstrap}. This is one of the most used HTML, CSS and Javascript frameworks to develop responsive and mobile websites. The group chose to use Bootstrap because it helps writing cleaner code and therefore the group  saves time writing CSS-code. 
 
 \subsection{Back End}
 \subsubsection{Amazon Web Services - EC2}
-Amazon Web Services (AWS) is a cloud services platform, offering compute power, database storage and much more \cite{AWS}. The group proposed to host the web portal on a Virtual Private Server (further denoted as VPS) instead of web hotel to the customer. Based on the benefits and discussions; the customer decided to use VPS as hosting service, and to go with Amazon Web Services as provider. Amazon was chosen as a provider based on the fact that they are big in the game and because they can "survive" anything, which is an important requirement for the customer. That the web portal and it's data, will not disappear over night. 
+Amazon Web Services (denoted as AWS) is a cloud services platform, offering compute power, database storage and much more \cite{AWS}. The group proposed to host the web portal on a Virtual Private Server (denoted as VPS) instead of web hotel to the customer. Based on the benefits and discussions; the customer decided to use VPS as hosting service, and to go with AWS as provider. The customer chose AWS as the VPS provider because they are one of the biggest on the market. A customer requirement was that the production data was safe and would not disappear. AWS, provide this security and thus fulfills the requirement.
 
-The group choose to use Amazon Elastic Compute Cloud (further denoted as EC2) \cite{EC2}. It is a web service that gives complete control of the computing resources and reduces time used to create a VPS instance. The decision was also given by the fact that part of the team have prior experience with EC2 technology. 
+The group choose to use Amazon Elastic Compute Cloud (denoted as EC2) \cite{EC2}. It is a web service that gives complete control of the computing resources and reduces time used to create a VPS instance. The decision was also given by the fact that part of the team have prior experience with EC2 technology. 
 
 
 \subsubsection{Nginx}
-The group chose to use Nginx \cite{nginx} as a reverse proxy and load balance between the EC2 instance and the web portal application. The use of reverse proxy can hide the existence of an origin server, and to reduce the stress-load on the web portal. The group decided to use Nginx instead of e.g. Apache2, because the group lead of back end had prior experience with Nginx.
+The group chose to use Nginx \cite{nginx} as a reverse proxy and load balance between the EC2 instance and the web portal application. The use of reverse proxy can hide the existence of an origin server, and to reduce the stress-load on the web portal. The group decided to use Nginx instead of e.g. Apache2, because the member who was main responsible for the back end had prior experience with Nginx.
 
 
 \subsubsection{Python}
+\label{python}
 The group chose to use Python as the programming language for the server side of the web portal. This was a decision based on the fact that \textit{"Python is a programming language that lets you work quickly and integrate systems more effectively"} \cite{python}. The group has previous experience with the language and it is a widely spread language. So when the project is done, and someone else is to further develop the project, they can easily get started without the need to learn a new language.
 
 \subsubsection{Django}

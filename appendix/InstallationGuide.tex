@@ -1,0 +1,159 @@
+%===================================== CHAP 6 =================================
+
+\lstset{ 
+    language=bash, % choose the language of the code
+    basicstyle=\fontfamily{pcr}\selectfont\footnotesize\color{black},
+    keywordstyle=\color{black}\bfseries, % style for keywords
+    numbers=none, % where to put the line-numbers
+    numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
+    backgroundcolor=\color{lightgray},
+    showspaces=false, % show spaces adding particular underscores
+    showstringspaces=false, % underline spaces within strings
+    showtabs=false, % show tabs within strings adding particular underscores
+    frame=false, % adds a frame around the code
+    tabsize=2, % sets default tabsize to 2 spaces
+    rulesepcolor=\color{gray},
+    rulecolor=\color{black},
+    captionpos=b, % sets the caption-position to bottom
+    breaklines=true, % sets automatic line breaking
+    breakatwhitespace=false, 
+}
+
+
+\chapter{Installation Guide}
+\settocdepth{chapter}
+
+\section{Preface}
+The operating system of the server is Ubuntu 16.04, with Nginx as reverse proxy, and the protocol between Nginx and the application is Uwsgi. If you are to install without using AMI, the steps are the same on all operating systems, but the terminal commands, and file paths may be different.
+All commands are typed in the terminal / command line, unless explicitly stated. Some of the commands may need to be executed with "sudo"
+
+\section{Installation Guide with AMI}
+The easy and straight forward installation of the application is just 9 steps, and requires only one prerequisite. Using this installation method, requires no experience or knowledge in server or programming domain. 
+
+Estimated installation time is approximately 10 minutes.
+
+\subsection{Prerequisites}
+\begin{itemize}  
+\item Amazon Web Service Account (required)
+\item Domain Name Server pointer - Domain name e.g www.skalvi.no (optional)
+\end{itemize}
+
+\subsection{Installation}
+\begin{enumerate}
+    \item Navigate to the Amazon Web Services and log in.
+    \item Select Services -- Compute -- EC2  from the navigation bar.
+    \item In the left most toolbar, select AMIs under the Images section,
+    \item Search for Public images =  Skalvi
+    \item Select the image with name = "COPYskalviProd", than select  Actions -- Launch
+    \item Click "next", until Step 6: Configure Security Group.
+    \item Now you have to add 3 rules
+    \begin{enumerate}
+        \item Type = HTTP, Protocol = TCP, Port Range = 80, Source = custom and 0.0.0.0/0, ::/0
+        \item Type = Custom TCP Rule, Protocol = TCP, Port Range = 8000, Source = custom and 0.0.0.0/0, ::/0
+        \item Type = Custom TCP Rule, Protocol = TCP, Port Range = 3000, Source = custom and 0.0.0.0/0, ::/0
+    \end{enumerate}
+    \item click "Review and launch"
+    \item click "Launch"
+\end{enumerate}
+
+Now you are done. All you have to do is to wait for the instance to install it self, and the you can navigate to the public IP or public DNS given by Amazon Web Services
+We recommend pointing your own Domain name to the public IP address.
+
+
+If you are missing som functions or features, you probably have to sign in to the server using ssh, and then;
+
+\begin{lstlisting}
+        $ workon bachelor
+        $ cd /home/ubuntu/UngIT
+        $ git branch
+            >> *master
+        $ git pull
+        $ npm install  # (may need sudo as prefix)
+        $ pip install -r py-requirements.py
+        $ npm run build-production
+        $ python manage.py collectstatic
+            $ yes
+        $ deactivate
+        $ sudo systemctl restart uwsgi
+            
+    \end{lstlisting}
+
+\section{Installation Guide without AMI}
+\subsection{Prerequisites needed}
+\begin{itemize}  
+\item Python 3.5.x
+\item Node.js version 6.10.x
+\item RAM 1Gb (minimum)
+\item Git, to download the application
+\end{itemize}
+
+\subsection{Recommended tools}
+\begin{itemize}  
+    \item virtualenv, for Python3
+    \item virtualenvwrapper for Python3
+    \item Nginx as reverse proxy server
+    \item Uwsgi as protocol, using unix socket.
+\end{itemize}
+
+\subsection{Installation}
+\begin{enumerate}
+    \item Clone the UngIT github repository to your server.    
+    \begin{lstlisting}
+        $ git clone https://github.com/ung-it/UngIT.git
+        $ cd UngIT # change into the project directory
+    \end{lstlisting}
+    
+    \item If you are using virtualenvwrapper, remember to activate it before using any of the following commands.
+    
+    Install application dependencies. To be able to execute these commands, you need to be in the project directory root. To check this, find the directory level containg the files manage.py, package.json and py-requirements.py. In the terminal run the following commands
+    \begin{lstlisting}
+        $ npm install  # (may need sudo as prefix)
+        $ pip install -r py-requirements.py
+    \end{lstlisting}
+    
+    \item Now that you have installed the needed project dependencies, the next thing is to create the bundle file. The bundle file is used to minify and distribute the JavaScript files.    
+    \begin{lstlisting}
+        $ npm run build-production # (may need sudo as prefix)
+    \end{lstlisting}
+
+    \item After creating the bundle file, we have to configure the database.
+    \begin{lstlisting}
+        $ Python manage.py migrate
+    \end{lstlisting}
+    
+    if this prints something in read, and asks you to execute the command 
+    "\$ Python manage.py makemigrations --merge"
+    you have to execute it, and then run the first command again.   
+    \item Next up, is to collect all the static files the application needs, in one directory. that the application looks for all the files while running.
+    \begin{lstlisting}
+        $ Python manage.py collectstatic
+        $ yes  (to overwrite files)
+    \end{lstlisting}
+    
+    %\item All that remains now is to start the application and make it run, even if the terminal is closed. We will make this happen by making the application run as background process
+    %\begin{lstlisting}
+     %   $ Python manage.py runserver &
+     %   $ ctrl + c 
+    %\end{lstlisting}
+    
+    \item Assuming that you have configured Nginx and Uwsgi, all that remains is starting the application. 
+    If you have created a .ini file, e.g skalvi.ini for uwsgi, all you need to do is 
+    \begin{lstlisting}
+        $ sudo uwsgi skalvi.ini
+        $ ctrl + c
+    \end{lstlisting}
+    
+    Now you have started the application and Nginx handles the incoming requests, passes them on to uwsgi that then handles the request and response to the application, and then returns the response to Nginx which serves the request with an response.
+    
+    \item To stop the application, we need to find the process id, then signal a kill for that application.
+    \begin{lstlisting}
+        $ Top | grep uwsgi
+        >> <pid>  xxx xxx xxx xx
+        >> ...
+        $ sudo killall -9 uwsgi
+    \end{lstlisting}
+    
+\end{enumerate}
+    
+
+\cleardoublepage

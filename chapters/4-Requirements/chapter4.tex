@@ -6,13 +6,15 @@
 \label{MVP}
 The group represents their commitment and shared goal by specifying a definition of the Minimum Viable Product (denoted as MVP) that they are to deliver when the project deadline is due.
 
-The Minimal Viable Product the group is to deliver is a web portal with a homepage, an overall activity page, admin and user profile pages. The Web portals home page presents upcoming events to the user. The portal is a user account service - meaning the events the homepage presents depends on the user logged in, such as 'my events'  if the user are hosting some. The portal will have an page that displays all the registered events, and allows for search and filtering. 
-The design of the portal, will be under the WCAG 2.0, rules for universal design.
+The MVP the group is to deliver is a web portal with a homepage, an overall activity page, admin and user profile pages. The Web portals home page presents upcoming events to the user. The portal is a user account service - meaning the events the homepage presents depends on the user logged in, such as 'my events'  if the user are hosting some. The portal will have an page that displays all the registered events, and allows for search and filtering. 
+The design of the portal, will be under the WCAG 2.0 protocol, which state rules for universal design.
 
 \section{Functional requirements}
+This section contains the functional requirements for the product, which specifies what the system should do \cite{requirements}. These requirements were made by the group and verified by the customer, who also added some which he thought were important.
+
 \subsection{User Stories}
 \label{User stories}
-The group were asked to create user stories. To have a common understanding of how to define a story as ready or done the group created some criterias. 
+The group were asked to create user stories (see table \ref{User_Stories}). The customer verified the user stories and added a priority to guide the group. To have a common understanding of how to define a story as ready or done the group created some criteria. 
 
 \begin{description}
     \item[When a user story are ready:]
@@ -33,7 +35,7 @@ The group were asked to create user stories. To have a common understanding of h
     \item A user story is done when all clarifications should be documented in wiki on GitHub
 the design is approved by the responsible person on design, Ingrid Skar
     \item A user story is done when all code is approved in unit tests
-    \item A user story is done when no more todos in Waffle on the case
+    \item A user story is done when no more todos in Waffle.io on the case
     \item A user story is done when Functional testing is done
 \end{itemize}
 
@@ -46,7 +48,7 @@ the design is approved by the responsible person on design, Ingrid Skar
 \rowcolor{Gray}
 \textbf{ID} & \textbf{User Story} & \textbf{Acceptance criteria} & \textbf{Priority} \\
 \hline
-US.00 & \textbf{As a} user, \textbf{I want} to see upcoming activities \textbf{So that I can} get an overview of my opportunities & The user can view the front page. The front page shows activities that a user can attend.& 100\\
+US.00 & \textbf{As a} user, \textbf{I want} to see upcoming activities \textbf{So that I can} get an overview of my opportunities & The front page includes upcoming activities which the user can attend. The front page shows activities that a user can attend.& 100\\
 \hline
 US.01 & \textbf{As a} user, \textbf{I want} to see promo(video / pictures) of the activities \textbf{So that I can} see the purpose of the activity and what equipment is necessary, etc & & 100 \\
 \hline
@@ -79,50 +81,82 @@ PA.01 & \textbf{As a} parent, \textbf{I want} to see all activities for my regio
 \hline
 PA.02 & \textbf{As a} parent, \textbf{I want} to add activities I know about \textbf{So that I can} help others and to improve the selection of activities & & 90\\
 \hline
-PA.02 & \textbf{As a} parent, \textbf{I want} to give constructive feedback on what did/not work \textbf{So that} other parents can filter out activities & 80 \\
-\hline
 PA.03 & \textbf{As a} parent, \textbf{I want} to give constructive feedback on what did/not work \textbf{So that} other parents can filter out activities & & 70\\
 \hline
-PA.04 & \textbf{As a} parent, \textbf{I want} to explicit know how many “assistants” there are \textbf{So that I} know if my child will be taken care of, helped and included. & 100\\
+PA.04 & \textbf{As a} parent, \textbf{I want} to explicit know how many “assistants” there are \textbf{So that I} know if my child will be taken care of, helped and included. & & 100\\
 \hline
 PA.05 & \textbf{As a} parent, \textbf{I want} know how many participants / groups there are \textbf{So that I can}  know if there are many participants, but their divided into smaller groups, etc. & & 70\\
 \hline
 PA.06 & \textbf{As a} parent, \textbf{I want} have a informal contact channel \textbf{So that I can} quick and easy ask questions directly to the provider & Depends on whether the activity has a hotline that works & 100 \\
 \hline
-PA.07 & \textbf{As a} parent, \textbf{I want} have access to more indepth information about an activity than my child \textbf{So that I can} figure out if the activity is suitable for my child & Navigation back and forward between the pages works. More information should be given at the “in depth” page. & 80 \\  
+PA.07 & \textbf{As a} parent, \textbf{I want} have access to more in-depth information about an activity than my child \textbf{So that I can} figure out if the activity is suitable for my child & Navigation back and forward between the pages works. More information should be given at the “in depth” page. & 80 \\  
 \hline
+
+PR.00 & \textbf{As a} provider, \textbf{I want} to easily register detailed information regarding facilitation for each activities. \textbf{So that} others can find my activities & & \\
+\hline
+PR.01 & \textbf{As a} provider, \textbf{I want} to see and show ratings on my activities \textbf{So that I can} improve my activities & & 80 \\
+\hline
+PR.02 & \textbf{As a} provider, \textbf{I want} to easily register my events in one and only one place \textbf{So that} maintenance and duplication is avoided & & 100\\
+\hline
+PR.03 & \textbf{As a} provider, \textbf{I want} the opportunity to add picture / video for an activity
+ \textbf{So that I can} present the activity in a good way & Can also be for users, e.g. parents who want to add photos & 70 \\
+\hline
+
+SM.00 & \textbf{As a} system maintainer, \textbf{I want}  easily install the system in a standard web hotel \textbf{So that}  & & 100 \\
+\hline
+SM.01 & \textbf{As a} system maintainer, \textbf{I want} to be able to make the system easily available through a standard domain name \textbf{So that I can} improve my reach & & 100 \\
+\hline
+SM.02 & \textbf{As a} system maintainer, \textbf{I want} to be able to secure my data \textbf{So that}  users can trust me & E.g. having DB on a secure server & 100\\
+\hline
+SM.03  & \textbf{As a} system maintainer, \textbf{I want} be able to integrate with new event systems systems, e.g. Facebook, Events Trondheim... \textbf{So that}  users can add a variety of events easily & & 100 \\
+\hline
+
 \caption{User Stories}
-\label{User story}
+\label{User_Stories}
 \end{longtable}
 
 
 
 \subsection{User Cases}
 \label{User cases}
+The use cases\cite{} created by the group are based on the requirements of the system. The use cases are represented alongside their respective figure, through figures x.xx - y.yy. Prerequisite in all use cases is a device with Internet connection and a  Internet browser.
+
+\begin{figure}
+    
+\end{figure}
  
 \section{Non-functional requirements}
+Non-functional requirements specifies how the system performs a certain function \cite{requirements}. The non-functional requirements were defined by the customer.
+
+
 \subsection{Open Source}
-Open source means that the source code to the data program is made available to everyone, usually on the Internet. Open source code can be published under many different licence agreements.
+Open source means that the source code to the product is made available to everyone, usually on the Internet. Open source code can be published under many different licence agreements.
 
 \subsubsection{Apache2 Licence agreement}
-The customer required that the product was published as open source under the licence Apache2 \cite{apache2}. Apache2 is a licence that does not restrict the use of the source with much. The source code is available to all, and can be reused, further developed, distributed, and further more as long as the required notices with the source code maintained. 
+The customer required that the product was published as open source under the licence Apache2 \cite{apache2}. Apache2 is a licence that does not restrict the re-usage of the source code. The source code is available to all, and can be reused, further developed, distributed, and more as long as the required original notices follows the source code and is maintained. 
 
-The notices has to be in a text file called NOTICE, that the work includes as part of its distribution.
+The notices has to be in a text file called NOTICE.txt, that the work includes as part of its distribution. All that means is that the only thing needed to re-use and deploy another version of the www.skalvi.no source code, is to include the original notice (the www.skalvi.no.notice) in the re-distribution.
 
 
 \subsection{Server Availability}
+Server availability became a non-functional requirement in the second sprint, when the customer requested that the latest stable development version was available on www.skalvi.no at all times. The customer also wanted the server to be updated at least once a week. The group decided that the server would be updated two times a week, Wednesday and Fridays. Because the development methodology was scrum, this requirement was made aware of early in the  development process, and could be incorporated in the working sprint. This reveled that a few changes to the architecture was needed. and potential big problems, such as production- v.s. development configurations, class dependencies, etc  was discovered early and was fixed and avoided.
 
 \subsection{Privacy}
+As the web portal was centered around users and the information they supplied, requirements for privacy became important.
 
 \subsection{Universal Design}
 \label{universalDesign}
-"Universal design means designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible, regardless of disability." \cite{Difi} Designing the web-portal according to the universal design principles was one of the most specific requirements from the customer. As the intentional user group of skalvi.no is children with special needs, the group aimed to design the web-portal following these principles. 
+"Universal design means designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible, regardless of disability." \cite{Difi} Designing the web-portal according to the universal design principles was one of the most specific requirements from the customer. As the intentional user group of www.skalvi.no is children with special needs, the group aimed to design the web-portal following these principles. Examples on principles that were implemented are;   
 
 
 \subsection{Scalability}
-It will be a long term goal.
+At the start of the project the group asked the customer about scalability for the web portal. The web portal is initially intended the citizens of Trondheim municipality, so the customer requested that this should be a long term non-functional requirement.
+
 
 \section{Changes to Requirements}
+Remember:
+- Forum
++ Comments
 
 \subsubsection{Additions}
 
