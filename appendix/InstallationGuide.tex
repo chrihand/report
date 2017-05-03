@@ -21,6 +21,7 @@
 
 
 \chapter{Installation Guide}
+\label{Installation Guide}
 \settocdepth{chapter}
 
 \section{Preface}
@@ -63,6 +64,8 @@ We recommend pointing your own Domain name to the public IP address.
 If you are missing som functions or features, you probably have to sign in to the server using ssh, and then;
 
 \begin{lstlisting}
+        $ sudo systemctl stop nginx
+        $ sudo systemctl stop uwsgi
         $ workon bachelor
         $ cd /home/ubuntu/UngIT
         $ git branch
@@ -74,7 +77,8 @@ If you are missing som functions or features, you probably have to sign in to th
         $ python manage.py collectstatic
             $ yes
         $ deactivate
-        $ sudo systemctl restart uwsgi
+        $ sudo systemctl start uwsgi
+        $ sudo systemctl start nginx
             
     \end{lstlisting}
 

@@ -3,12 +3,12 @@
 \chapter{System Architecture}
 
 \section{Architecture Description}
-The project can be divided into back-end and front-end (see fig. \ref{Architecture}).
+The web portal can be divided into back-end and front-end (see Figure \ref{Architecture}).
 \\On the back-end, Nginx is used to serve the static files and media requested by the client. All other requests are routed to a server hosted by Django. This server is responsible for routing to sub-pages, authentication and rendering of templates. The SQLite database is also running on this server, providing efficient data flow. The data in the database can only be accessed through the server, making it secure.
 
 On the front-end the client receives files from the server to be displayed in a browser. Some of the files contains components created using the React library. These components take user input, exchange data with the server and display the new information, giving the website a dynamic behaviour.
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
     \includegraphics[width=1\textwidth]{fig/Architecture}
 \caption{Architecture}
@@ -16,37 +16,40 @@ On the front-end the client receives files from the server to be displayed in a 
 \end{figure}
 
 \section{Back End}
-The back end was written in Python (see \ref{python}) with the Django framework (see \ref{django}). The back end is the application's logical layer. The back end communicates with all front end layers, validates information that comes from client and serves the outgoing information to client. Database restrictions are also handled by this layer. All information flow going through the database are created, validated and updated at this stage. 
+The back-end was written in Python (see \ref{python}) with the Django framework (see \ref{django}), and is the application's logical layer. It communicates with the front-end layers, validates information that comes from clients and serves the outgoing information. Database restrictions are also handled by this layer. All information flow going through the database is created, validated and updated at this stage. 
 
 
 \subsection{Database Structure}
 The database is structured with four different tables; User, UserProfile, Activity and Organisation. These four tables are bounded together by three different relational tables and one single relation between the User table and the UserProfile table. The relational tables are ParticipatedIn, EmployedIn and Hosts (see fig. \ref{Database_Figure}).
 
-The User table is a pre-defined table created by the Django framewor (see \ref{django}). The group chose to use this table to handle User identification. This is a part of Django's security around authentication, and it would require much extra work to write a new secure user authentication system. The client also wanted to divide users into groups, such as a family group. Because of this requirement, the group chose to create a UserProfile table which is dependent on the User table. This allowed for customizing user profiles and creating user groups, without tampering with Django's authentication system. 
+The User table is a pre-defined table created by the Django framework (see \ref{django}). The group chose to use this table to handle User identification. This is a part of Django's security authentication, and it would require a lot extra work to write a new secure user authentication system. The customer also wanted to divide the users into groups, such as a family group. Because of this requirement, the group chose to create a UserProfile table which is dependent on the User table. This allowed for customizing user profiles and creating user groups, without tampering with Django's authentication system. 
 
 The rest of the database works like a normal relational database.
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-    \includegraphics[width=0.85\textwidth]{fig/database_diagram}
+    \includegraphics[width=0.90\textwidth]{fig/erDatabase}
 \caption{Database structure}
 \label{Database_Figure}
 \end{figure}
 
 
 \subsection{Access to Aktørbasen}
-A requirement that was made clear, from the beginning of the project and the first meeting with the customer (see \ref{Customer input}), was the need for the web portal to interact with Trondheim Kommune Aktørdatabase. It was important that the leicure activity provoiders that allready was registered in the Aktørdatabbase, could reuse this account or information. such that they don't have to retype allready existing inforamtion. 
+\label{Aktordatabasen}
+A requirement that was made clear, from the beginning of the project and the first meeting with the customer (see \ref{Customer input}), was the need for the web portal to interact with Trondheim Kommune Aktørdatabase. It was important that the leisure activity providers that already was registered in this database, could reuse their account or information. In this way it would become more appealing to start using the web portal.
 
-Another aspect of the interaction with the Aktørdatabase, is the oppertunity to extract registred leicure activities and leisure clubs. and present them to users through the web portal, and allow users to search for them. Just as a Google search. 
+Another aspect of the interaction with the Aktørdatabase, was the opportunity to extract registered leisure activities and leisure clubs, and present them to users through the  web portal. This would allow the users to easily search for them, just as a Google search. 
 
-Since the Aktørdatabase is still under development the group had assume, that the Aktørdatabase was to held leisure activities and leisure providers, and after development provide a API that skalvi.no web portal could use, but during development to gain access to the registred information in the Aktørdatabase, the group created a program that queries the official interface for the Aktørdatabase, and then extract the relevant information. This solution is just during development to show the possibility and gain of using the database with skalvi.no. 
+During the group's development process the group had a meeting with the developers and project leader of Trondheim Kommune Aktørdatabase, to discuss the opportunities and later usage of the Aktørdatabase.
 
-During the groups development process the group had a meeting with the developers and project leader of Trondheim Kommune Aktørdatabase, to disguss the oppertunities and later usage of the Aktørdatabase.
+Aktørdatabasen is still under development. Based on the meeting with their representatives, an assumption was therefore made by the group that it was going to contain additional information about leisure activities and leisure providers in the future. This information could be available through an API, giving the web portal access to the information as well. Since this solution does not yet exist, the group created a program that queries the official interface of the Aktørdatabase, and then extracts the relevant information. This solution was used during development to show Trondheim municipality a possible usage of their database and encourage future cooperation with skalvi.no. 
 
 \section{Front End}
+The front end was mainly written in HTML5, Javascript and CSS. To make the web portal dynamic and modern, additional frameworks and libraries like React, Redux, Bootstrap and Material Design Lite were used. The HTML was written i Django Templates, which made it easy to create web pages with dynamic content. The front-end is the application's visual layer which is served by the logical layer. The visual layer also send information to the back-end for validation.
+
 
 \subsection{Data Flow}
-The data flow figure (see fig. \ref{Data_Flow_Diagram}) was used to help the group members get common understanding of the structure of the web portal. The figure shows where users can navigate within the web portal under different conditions. The figure shows that a user can always navigate to "Front page" and "Activities page", but must be logged in to be able to navigate to "Choose user page" and "My page". Inside "My page" the user can access "Create activity page" and "Edit activity page" if the user is hosting the specific activity. 
+The data flow figure (see fig. \ref{Data_Flow_Diagram}) was used to help the group members get common understanding of the structure of the web portal. The figure shows where users can navigate to on the web portal given certain conditions. It shows that a user can always navigate to "Front page" and "Activities page", but must be logged in to be able to navigate to "Choose user page" and "My page". Inside "My page" the user can access "Create activity page" and "Edit activity page" if the user is hosting the specific activity. 
 
 \begin{figure}[H]
 \centering
@@ -87,11 +90,74 @@ During the weekly meeting with the customer, he requested that ha wanted a moder
 Therefor the opportunity to register user profiles on one specific main user was implemented. When the main user is logging in, it is possible to select which user profile the user wants to use. It is also possible to change user profile at any time.
 
 \section{Graphical User Interface}
-The graphical user interface was created in two phases. The first phase was creating a simple paper prototype and the second phase was to develop the user interface with the paper prototype as a template.  
+The graphical user interface was created in two phases. The first phase was creating a simple paper prototype and the second phase was to develop the user interface with the paper prototype as a template.
 
-\subsection{Paper Prototype}
-During sprint 0 (see \ref{sprint0}) the group designed a paper prototype as the first design of the application. This was a very helpful asset for the group, as it created a common understanding of what was expected to be developed.  
+\subsection{Paper Prototype} \label{ss:paper_prototype}
+During sprint 0 (see section \ref{sprint0}) the group designed a paper prototype as the first design of the application. This was a very helpful asset for the group, as it created a common understanding of what was expected to be developed.
+
+The paper prototype was also presented to the costumer at the end of the sprint, as the group explained the first draft of the design and how the functionality was intended to be developed. This created a common ground for the group and the costumer, ensuring that the groups interpretation of the task was correct. 
+
+The design of the final product was highly inspired by the paper prototype. This is reflected in figure \ref{fig:paper_front}, showing the paper prototype of the front page, and \ref{fig:skalvi_front} which displays the actual front page of skalvi.no. Figure \ref{fig:paper_modal} and \ref{fig:skalvi_modal} displays the first draft and the final design of the modal of an activity at skalvi.no, demonstrating the correlation between the different designs.  
+
+\begin{figure}[H] 
+\centering
+\begin{minipage}{.2\textwidth}
+\includegraphics[scale=0.2]{fig/PaperPrototype/Front_page.pdf}
+\caption{Paper prototype frontpage}
+\label{fig:paper_front}
+\end{minipage}%
+\begin{minipage}{.6\textwidth}
+\includegraphics[scale=0.2]{fig/PaperPrototype/forside_skalvi.PNG}
+\caption{skalvi.no frontpage}
+\label{fig:skalvi_front}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H] 
+\centering
+\begin{minipage}{.3\textwidth}
+  \centering
+\includegraphics[scale=0.2]{fig/PaperPrototype/One_activity.pdf}
+\caption{Paper prototype modal}
+\label{fig:paper_modal}
+\end{minipage}%
+\begin{minipage}{.7\textwidth}
+\centering
+\includegraphics[scale=0.2]{fig/PaperPrototype/modal_skalvi.PNG}
+\caption{skalvi.no modal}
+\label{fig:skalvi_modal}
+\end{minipage}
+\end{figure}
+
+
+% \begin{figure}[H]
+% \centering
+%     \includegraphics[width=0.7\textwidth]{fig/PaperPrototype/One_activity.pdf}
+% \caption{Paper prototype - one activity modal}
+% \label{One_Activity_PP}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+%     \includegraphics[width=0.7\textwidth]{fig/PaperPrototype/Create_activity.pdf}
+% \caption{Paper prototype - create activity}
+% \label{Create_Activity}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+%     \includegraphics[width=0.7\textwidth]{fig/PaperPrototype/All_activities_1.pdf}
+% \caption{Paper prototype - all activities with checkbox filter}
+% \label{All_Activities_1}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+%     \includegraphics[width=0.7\textwidth]{fig/PaperPrototype/All_activities_3.pdf}
+% \caption{Paper prototype - all activities with drop down filter}
+% \label{All_Activities_3}
+% \end{figure}
 
 \subsection{User Interface}
-The user interface is based on proverbial design principals and uses a lot symbols that users may have encountered earlier on other websites. This is done so users do not have to acquire new knowledge to use the web portal. Universal Design (see \ref{universalDesign}) has also been important during the development of the user interface. This was especially important since the web portals user base was youths with disabilities and disadvantages. 
+The user interface is based on proverbial design principals and uses a lot symbols that users may have encountered earlier on other websites. This is done so users do not have to acquire new knowledge to use the web portal. Universal Design (see section \ref{universalDesign}) has also been important during the development of the user interface. This was especially important since the web portals user base was youths with disabilities and disadvantages. 
 \cleardoublepage
