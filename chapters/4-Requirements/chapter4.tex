@@ -1,17 +1,19 @@
 %===================================== CHAP 4 =================================
 
 \chapter{Requirements}
+\label{requirements}
 
 \section{Minimum Viable Product}
 \label{MVP}
-The group represents their commitment and shared goal by specifying a definition of the Minimum Viable Product (denoted as MVP) that they are to deliver when the project is due.
+The group represented their commitment and shared goal by specifying a definition of the Minimum Viable Product (denoted as MVP), which had to be delivered when the project was due. The first MVP was defined during sprint 0 (see section \ref{sprint0}), and was further defined as the project developed. See Appendix \ref{original_minimal_viable_product} for the first MVP, the final definition is presented below. 
 
-\textit{ The MVP the group is to deliver is a web portal with a homepage, an overall activity page, admin and user profile pages. The Web portal's home page presents upcoming events to the user. The portal is a user account service - meaning the events the homepage presents depends on the user logged in, such as 'my events'  if the user are hosting some. The portal will have an page that displays all the registered events, and allows for search and filtering. 
-The design of the portal, will be under the WCAG 2.0 protocol, which state rules for universal design.}
+\textit{ The MVP the group is to deliver is a web portal with a homepage, an overall activity page, an overall provider page, create activity page, and profile pages. The web portal's homepage presents upcoming events to the user. The portal is a user account service; meaning the information on the homepage depends on the user logged in, such as 'my attending activities' if the user are attending some. User is allowed to log in using an Facebook account, such that no one are required to create accounts to use the portal. The portal will have pages displaying all registered activities and providers, which allows for search and filtering. The portal allows providers to create activities, either from scratch or based on Facebook events, which are presented to all users. }
+
+\textit{The design of the portal, will be under the WCAG 2.0 protocol, which state rules for universal design.}
 
 \section{Functional requirements}
 \label{functional_requirements}
-This section contains the functional requirements for the product, which specifies what the system should do \cite{requirements}. These requirements were made by the group, based on experiences from the workshop with the users (see section \ref{WorkshopUserAndProviders}). The requirements were further verified by the customer, whom also added some of which he thought were important. These were as follows:
+This section contains the functional requirements for the product, which specifies what the system should do \cite{requirements}. These were made by the group, based on experiences from the workshop with the users (see section \ref{WorkshopUserAndProviders}) and customer input (see section \ref{Customer input}). The requirements were further verified by the customer, whom also added some he thought were important. These are as follows:
 \begin{itemize}[noitemsep]
     \item Log in.
     \item See complete list of activities, and filter these.
@@ -25,30 +27,7 @@ This section contains the functional requirements for the product, which specifi
 
 \subsection{User Stories}
 \label{User stories}
-The group created user stories (see tables 4.1 to 4.8 ) based on the functional requirements. These were further verified by the customer, whom also added priorities to guide the group. The user stories contains ID to identify each user story. Since the importance of different user functionalities had been especially emphasised during the workshop; the group decided to separate the user stories based on different user groups. This included the general user (US.xx), children(CH.xx), parents(PA.xx), providers(PR.xx) and system maintainers(SM.xx). The acceptance criteria are the criteria which has to be fulfilled for the user story to be categorised as done. The group also defined definitions of when a user story is ready and of when a user story is done, both of which are listed below. The group actively used these definitions during the development; to ensure each member that what is being created was a necessity, and when to declare it as complete and proceed to the next issue.  
-
-\begin{description}
-    \item[When a user story are ready:]
-\end{description}
-\begin{itemize}[noitemsep]
-    \item The user story is small
-    \item The user story is clearly defined
-    \item The user story is formulated according to "As a \textless role\textgreater, I want \textless goal\textgreater So that \textless goal is achieved \textgreater"
-    \item The user story is approved by the customer.
-\end{itemize}
-
-\begin{description}
-    \item[When a user story is done:]
-\end{description}
-\begin{itemize}[noitemsep]
-    \item A user story is done when all code is checked and approved by two others in the group
-    \item A user story is done when all code is merged into the develop branch on GitHub
-    \item A user story is done when all clarifications are documented in wiki on GitHub
-    \item A user story is done when the design is approved by the responsible person for design, Ingrid Skar 
-    \item A user story is done when all code is approved in unit tests
-    \item A user story is done when there are no more todos in Waffle.io on the case
-    \item A user story is done when Functional testing is done
-\end{itemize}
+The group created user stories (see tables \ref{User_Stories_login} to \ref{User_Stories_General}) based on the functional requirements. These were further verified by the customer, whom also added priorities to guide the group. The user stories contains ID to identify each one. Since the importance of different user functionalities had been especially emphasized during the workshop; the group decided to separate the user stories based on different user groups. This included the general user (US.xx), children(CH.xx), parents(PA.xx), providers(PR.xx) and system maintainers(SM.xx). The acceptance criteria are the criteria which have to be fulfilled for the user story to be categorized as done. The group also defined definitions of when a user story is ready and of when a user story is done, see Appendix \ref{user_story_definition}. The group actively used these definitions during the development; to ensure the group that what is being created was a necessity, and when to declare it as complete and proceed to the next issue.  
 
 The user stories are all listed below, in respect to the functional requirements. 
 
@@ -62,7 +41,7 @@ The user stories are all listed below, in respect to the functional requirements
 \rowcolor{Gray}
 \textbf{ID} & \textbf{User Story} & \textbf{Acceptance criteria} & \textbf{Priority} \\
 \hline
-US.03 & \textbf{As a} user, \textbf{I want} to be able to log in, \textbf{so that I can} sign up for events and see my personal page & A user must be able to log in. Get feedback after logged in. Stay logged in after refreshing page. Be able to log out. & 100 \\
+US.03 & \textbf{As a} user, \textbf{I want} to be able to log in, \textbf{so that I can} sign up for events and see my personal page. & A user must be able to log in. Get feedback after logged in. Stay logged in after refreshing page. Be able to log out. & 100 \\
 \hline
 US.08 & \textbf{As a} user, \textbf{I want} to be able to use Facebook to log in, \textbf{so that I} do not have to register an user to use the page. & A user must be able to log in using an Facebook account. Get feedback after logged in. Stay logged in after refreshing page. Be able to log out. & 100 \\
 \hline
@@ -94,7 +73,7 @@ CH.03 & \textbf{As a} child, \textbf{I want} to see all activities, \textbf{so t
 \hline
 PA.00 & \textbf{As a} parent, \textbf{I want} to see relevant activities for my child, \textbf{so that I} see if the respective activity is suitable for my child. & The user is able to search and filter activities based on adaption and activity type & 100 \\
 \hline
-PA.01 & \textbf{As a} parent, \textbf{I want} to see all activities for my region in one place, \textbf{so that I} don’t have to search the entire Internet & The page includes activities that is arranged in Trondheim kommune & 100 \\
+PA.01 & \textbf{As a} parent, \textbf{I want} to see all activities for my region in one place, \textbf{so that I} don’t have to search the entire Internet. & The page includes activities that is arranged in Trondheim kommune & 100 \\
 \hline
 \caption{User Stories - Activities}
 \label{User_Stories_Activities}
@@ -114,7 +93,7 @@ CH.06 & \textbf{As a} child, \textbf{I want} to see all activities, \textbf{so t
 \hline
 PA.08 & \textbf{As a} parent, \textbf{I want} to see relevant providers for my child, \textbf{so that I} see if the respective provider offers activities suitable for my child. & The user is able to search and filter provider based on adaption and activity type & 100 \\
 \hline
-PA.09 & \textbf{As a} parent, \textbf{I want} to see all providers for my region in one place, \textbf{so that I} don’t have to search the entire Internet & The page includes providers in Aktørbasen \ref{Aktordatabasen} & 100 \\
+PA.09 & \textbf{As a} parent, \textbf{I want} to see all providers for my region in one place, \textbf{so that I} don’t have to search the entire Internet. & The page includes providers from Aktørbasen \ref{Aktordatabasen} & 100 \\
 \hline
 \caption{User Stories - Providers}
 \label{User_Stories_Providers}
@@ -149,9 +128,9 @@ CH.05 & \textbf{As a} child, \textbf{I want} to see all activities the provider 
 \rowcolor{Gray}
 \textbf{ID} & \textbf{User Story} & \textbf{Acceptance criteria} & \textbf{Priority} \\
 \hline
-PA.02 & \textbf{As a} parent, \textbf{I want} to add activities I know about, \textbf{so that I can} help others and to improve the selection of activities & When logged in the parent can locate add activity button, fill in information and save the activity & 90\\
+PA.02 & \textbf{As a} parent, \textbf{I want} to add activities I know about, \textbf{so that I can} help others and to improve the selection of activities & When logged in the parent can locate add activity button, fill in information and save the activity. & 90\\
 \hline
-PR.00 & \textbf{As a} provider, \textbf{I want} to easily register detailed information regarding facilitation for each activities, \textbf{so that} others can find my activities. & When logged in the provider can locate add activity button, fill in information and save the activity. The activity is shown on All Activities page & 80\\
+PR.00 & \textbf{As a} provider, \textbf{I want} to easily register detailed information regarding facilitation for each activities, \textbf{so that} others can find my activities. & When logged in the provider can locate add activity button, fill in information and save the activity. The activity is shown on All Activities page. & 80\\
 \hline
 PR.02 & \textbf{As a} provider, \textbf{I want} to easily register my events in one and only one place, \textbf{so that} maintenance and duplication is avoided. & When logged in the provider can locate add activity button, fill in information and save the activity, based on a Facebook activity. The activity is shown on All Activities page. & 100\\
 \hline
@@ -172,9 +151,7 @@ PR.03 & \textbf{As a} provider, \textbf{I want} the opportunity to add picture /
 \rowcolor{Gray}
 \textbf{ID} & \textbf{User Story} & \textbf{Acceptance criteria} & \textbf{Priority} \\
 \hline
-US.01 & \textbf{As a} user, \textbf{I want} to see promo (video / pictures) of the activities, \textbf{so that I can} see the purpose of the activity, and what equipment is necessary, etc.. & The user can add a image when creating an activity, and the image is shown on the activity on front page and All Activities page & 100 \\
-\hline
-PA.04 & \textbf{As a} parent, \textbf{I want} to explicit know how many “assistants” there are on an activity, \textbf{so that I} know if my child will be taken care of, helped and included. & - & 100\\
+US.01 & \textbf{As a} user, \textbf{I want} to see promo (video / pictures) of the activities, \textbf{so that I can} see the purpose of the activity, and what equipment is necessary, etc.. & The user can add a image when creating an activity, and the image is shown on the activity on front page and All Activities page. & 100 \\
 \hline
 \caption{User Stories - One Activity}
 \label{User_Stories_Activity}
@@ -192,9 +169,9 @@ PA.04 & \textbf{As a} parent, \textbf{I want} to explicit know how many “assis
 \hline
 PA.03 & \textbf{As a} parent, \textbf{I want} to give constructive feedback on what did/not work, \textbf{so that} other parents can filter out activities. & The user can add a comment in the activity modal. & 70\\
 \hline
-PA.06 & \textbf{As a} parent, \textbf{I want} have a informal contact channel, \textbf{so that I can} quick and easy ask questions directly to the provider & The user can add a comment in the activity modal & 80 \\
+PA.06 & \textbf{As a} parent, \textbf{I want} have a informal contact channel, \textbf{so that I can} quick and easy ask questions directly to the provider. & The user can add a comment in the activity modal. & 80 \\
 \hline
-PR.01 & \textbf{As a} provider, \textbf{I want} to see and show ratings on my activities, \textbf{so that I can} improve my activities. & The user can see the rate information on the activity modal & 80 \\
+PR.01 & \textbf{As a} provider, \textbf{I want} to see and show ratings on my activities, \textbf{so that I can} improve my activities. & The user can see the rate information on the activity modal. & 80 \\
 \hline
 \caption{User Stories - Feedback}
 \label{User_Stories_Feedback}
@@ -210,70 +187,70 @@ PR.01 & \textbf{As a} provider, \textbf{I want} to see and show ratings on my ac
 \rowcolor{Gray}
 \textbf{ID} & \textbf{User Story} & \textbf{Acceptance criteria} & \textbf{Priority} \\
 \hline
-US.05 & \textbf{As a} user, \textbf{I want} to be able to easily navigate between subpages on the webpage, \textbf{so that I can} browse the webpage efficiently & Navigation bar should be fully functional. Refreshing the webpage should not change the webpage. & 100 \\
+US.05 & \textbf{As a} user, \textbf{I want} to be able to easily navigate between subpages on the webpage, \textbf{so that I can} browse the webpage efficiently. & Navigation bar should be fully functional. Refreshing the webpage should not change the webpage. & 100 \\
 \hline
-SM.00 & \textbf{As a} system maintainer, \textbf{I want}  easily install the system in a virtual private server, \textbf{so that} I can easily give access to others & An installation guide on how to install the system is in appendix \ref{Installation Guide} & 100 \\
+SM.00 & \textbf{As a} system maintainer, \textbf{I want}  easily install the system in a virtual private server, \textbf{so that} I can easily give access to others. & An installation guide on how to install the system is in appendix \ref{Installation Guide}. & 100 \\
 \hline
-SM.01 & \textbf{As a} system maintainer, \textbf{I want} to be able to make the system easily available through a standard domain name, \textbf{so that I can} improve my reach & The web page is accessed on skalvi.no & 100 \\
+SM.01 & \textbf{As a} system maintainer, \textbf{I want} to be able to make the system easily available through a standard domain name, \textbf{so that I can} improve my reach. & The web page is accessed on skalvi.no. & 100 \\
 \hline
-SM.02 & \textbf{As a} system maintainer, \textbf{I want} to be able to secure my data, \textbf{so that}  users can trust me & The system uses virtual provider server, therefor the system maintainer is the only one who has access to personal information & 100\\
+SM.02 & \textbf{As a} system maintainer, \textbf{I want} to be able to secure my data, \textbf{so that}  users can trust me. & The system uses virtual provider server, therefor the system maintainer is the only one who has access to personal information. & 100\\
 \hline
-SM.03  & \textbf{As a} system maintainer, \textbf{I want} be able to integrate with new event systems systems, e.g. Facebook, Events Trondheim, \textbf{so that} users can add a variety of events easily & The user are able to create events based on Facebook & 100 \\
+SM.03  & \textbf{As a} system maintainer, \textbf{I want} be able to integrate with new event systems systems, e.g. Facebook, Events Trondheim, \textbf{so that} users can add a variety of events easily. & The user are able to create events based on Facebook. & 100 \\
 \hline
 \caption{User Stories - General}
 \label{User_Stories_General}
 \end{longtable}
  
 \section{Non-functional requirements}
-Non-functional requirements specifies how the system performs a certain function \cite{requirements}. The non-functional requirements were defined by the customer.
-
+Non-functional requirements specifies how the system should perform on certain features \cite{requirements}. The non-functional requirements were defined by the customer.
 
 \subsection{Open Source}
-Open source means that the source code to the product is made available to everyone, usually on the Internet. Open source code can be published under many different licence agreements.
+Open source is defined as the source code to a product is made available to everyone. The code can be published under several licence agreements.
 
-\subsubsection{Apache2 Licence agreement}
-The customer required that the product was published as open source under the licence Apache2 \cite{apache2}. Apache2 is a licence that does not restrict the re-usage of the source code. The source code is available to all, and can be reused, further developed, distributed, and more as long as the required original notices follows the source code and is maintained. 
-
-The notices has to be in a text file called NOTICE.txt, that the work includes as part of its distribution. All that means is that the only thing needed to re-use and deploy another version of the www.skalvi.no source code, is to include the original notice (the www.skalvi.no.notice) in the re-distribution.
-
+\subsubsection{Apache2 Licence Agreement}
+The customer required that the product was published as open source under the licence Apache2. Apache2 is a licence that does not restrict the re-usage of the source code \cite{apache2}. The source code is available to all; it can be reused, further developed, and distributed as long as the required original notice follow the source code and is maintained. 
 
 \subsection{Server Availability}
-Server availability became a non-functional requirement in the Sprint 2 (see section \ref{sprint2}), when the customer requested that the latest stable development version was available on www.skalvi.no at all times. The customer also wanted the server to be updated at least once a week. The group decided that the server would be updated two times a week, Wednesday and Fridays. Because the development methodology was scrum, this requirement was made aware of early in the  development process, and could be incorporated in the working sprint. This revealed that a few changes to the architecture was required; and potential big problems, such as production- v.s. development configurations, class dependencies, etc was discovered early and was fixed and avoided.
+Server availability became a non-functional requirement in the Sprint 2 (see section \ref{sprint2}), when the customer requested that the latest functional version was available on www.skalvi.no at all times. The customer also wanted the server to be updated at least once a week, following the principles of the chosen methodology (see section \ref{methodology}). The group decided that the server would be updated two times a week, Wednesday and Fridays. As the group worked iteratively, according to the chosen development methodology, this request was incorporated in the working sprint. Furthermore, this revealed that changes to the architecture was required to avoid potential big problems; such as production- and development configuration, and class dependencies.
 
 \subsection{Security}
-As the web portal allowed users to register and log in, handling personal information in a good manner became important. By using the user authentication system provided by the Django framework both user access and privacy were achieved.
+As the web portal allowed users to register and log in, handling personal information in a good manner was considered as important. By using the user authentication system provided by the Django framework both user access and privacy were achieved. Allowing user to use Facebook accounts to log in was also a choice based on security, since Facebook is responsible for a secure log in.
 
 
 \subsection{Universal Design}
 \label{universalDesign}
-"Universal design means designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible, regardless of disability." \cite{Difi} Designing the web-portal according to the universal design principles was one of the most specific requirements from the customer. As the intentional user group of www.skalvi.no is children with special needs, the group aimed to design the web-portal following these principles. Examples on principles that were implemented are;   
+"Universal design means designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible, regardless of disability." \cite{Difi} Designing the web portal according to the universal design principles was one of the most specific requirements from the customer. As the intentional user group of www.skalvi.no is children with special needs, the group aimed to design the web portal following these principles. 
 
 
 \subsection{Scalability}
-At the start of the project the group asked the customer about scalability for the web portal. The web portal was initially intended for the citizens of Trondheim municipality, so the customer requested that this should be a long term non-functional requirement. If the product was to be a national offer, the time and effort spent on scalability would depend on the budget of the main project
+At the beginning of the project the group consulted with the customer about scalability for the web portal. The web portal was, for the period of this project, intended for the citizens of Trondheim municipality. However, it is desired for the project to become a national offer over time, thus the ability to scale was requested as a long term non-functional requirement.
 
 
 \section{Changes to Requirements}
 During the development of the product there have been some changes to the requirements. These changes were all determined in consultation with the customer during the customer meetings (see section \ref{ss:customer_meetings}). 
 
-The most substantial change was how the product would allow communication between users on the web page, and how to provide the users the experience of a web-society feeling. Instead of creating a forum where the users could communicate, as intentionally planned, it was decided to implement the possibility to comment each activity. This was a decision based on the concern of users bullying one another, and how this eventually should have been managed. Furthermore, since the product was to be developed as a proof of concept this issue should not be excessively time consuming, and providing the possibility to comment was considered to be sufficient. 
+The most substantial change was how the product would allow communication between users on the web page, and how to provide the users the experience of a web society feeling. Instead of creating a forum where the users could communicate, as intentionally planned, it was decided to implement the possibility to comment each activity. This was a decision based on the concern of users bullying one another, and how this eventually should have been managed. Furthermore, since the product was to be developed as a proof of concept this issue should not be excessively time consuming, and providing the possibility to comment was considered to be sufficient. 
 
-Other changes to the requirements included providing the users a list of the providers in Aktørbasen (see section \ref{Aktordatabasen}), and implement the possibility to filter similarly to how the activities are filtered.  
+Other changes to the requirements included providing the users a list of the providers from Aktørbasen (see section \ref{Aktordatabasen}), and implement the possibility to follow a provider and filter similarly to how the activities are filtered.  
 
 \subsubsection{Additions}
-Due to the changes to the requirements there are some of the user stories which are added to the initial lists of stories. These are respectively user stories CH.04, CH.05, CH06, CH.06, PA.08 and PA.09 (see tables in section \ref{User stories}).
+\label{additions}
+Due to the changes to the requirements there are some of the user stories which are added to the initial lists of stories. These are CH.04, CH.05, CH06, CH.06, PA.08 and PA.09 (see tables in section \ref{User stories}).
 
 \subsubsection{Removals}
+\label{removals}
 A few of the original user stories have been removed during the development (see table \ref{t:user_stories_removed}).
 
-User stories US.02 and CH.02 were essentially removed as a result of the user stories added; as these replace each other. 
+User stories US.02 and CH.02 were removed as a consequence of the user stories added (see section \ref{additions}), as these replace each other.
 
-PA.05 and PA.07 are user stories which are proposed in the further development (see section \ref{further_development}) of the product, but not included in the group's version. This was a decision the group reached because of the prioritisation from the customer, as these two stories had a relatively low priority compared to most other stories. As the users had expressed the importance of the children's experience of the concept, and especially their desire for a portal where children can find activities they can attend without help, the user stories concerning this user group were the topmost priority thoughout the development. 
+PA.04 have been removed due to feedback from users during the focus group (see section \ref{focusGroup}). This was initially a requirement the users desired, but as there are rarely any assistants at the activities this was considered irrelevant.
+
+PA.05 and PA.07 are user stories which are proposed in the further development (see section \ref{further_development}) of the product, but not included in the group's version. This was a decision the group reached because of the prioritization from the customer, as these two stories had a relatively low priority compared to most other stories. As the users had expressed the importance of the children's experience of the concept, and especially their desire for a portal where children can find activities they can attend without help, the user stories concerning this user group were the topmost priority throughout the development. 
 
 \begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.10\linewidth}
-                |L{0.33\linewidth}
-                |L{0.10\linewidth}|@{}}
+                |L{0.15\linewidth}
+                |L{0.60\linewidth}
+                |L{0.15\linewidth}|@{}}
 \hline
 \rowcolor{Gray}
 \textbf{ID} & \textbf{User Story} & \textbf{Priority} \\
@@ -282,10 +259,14 @@ US.02 & \textbf{As a} user, \textbf{I want} experience a web-society feeling, \t
 \hline
 CH.02 & \textbf{As a} child, \textbf{I want} a place to communicate with others, \textbf{so that I can} plan activities, that aren't available,  Needs to be tested with users. & 60 \\
 \hline
+PA.04 & \textbf{As a} parent, \textbf{I want} to explicit know how many “assistants” there are on an activity, \textbf{so that I} know if my child will be taken care of, helped and included. & 100\\
+\hline
 PA.05 & \textbf{As a} parent, \textbf{I want} know how many participants / groups there are, \textbf{so that I can} know if they divide many participants into smaller groups, etc. &70 \\ 
 \hline
-PA.07 & \textbf{As a} parent, \textbf{I want} have access to more in-depth information about an activity than my child, \textbf{so that I can} figure out if the activity is suitable for my child, Navigation back and forward between the pages works. More information should be given at the “in depth” page & 80 \\  
+PA.07 & \textbf{As a} parent, \textbf{I want} have access to more in-depth information about an activity than my child, \textbf{so that I can} figure out if the activity is suitable for my child. & 80 \\  
 \hline
+\hline
+
 \caption{User Stories - Removed}
 \label{t:user_stories_removed}
 \end{longtable}

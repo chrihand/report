@@ -1,34 +1,34 @@
 %===================================== CHAP 6 =================================
 
 \chapter{Testing}
+\label{Testing}
 
 \section{Test strategy}
-The goal for the project were to deliver a product with high quality, that works according to given requirements (see \ref{functional_requirements}).  The group discussed how and what to test during multiple meetings with the customer. The customer wanted to conduct user acceptance test and not unit- and integration tests. Since the product was a "proof of concept" (see \ref{Customer input}), the most important side of the product was not the functionality and logic, but to show the opportunities of such a product, and validate if it is something potently user wants to use. 
+The goal for the project was to deliver a product with high quality, that works according to the given requirements (see \ref{functional_requirements}). The group discussed how and what to test during multiple meetings with the customer. The customer wanted to conduct user acceptance tests, not unit- and integration tests. Since the product was a "proof of concept" (see \ref{Customer input}), the functionality and logic were not as important as showing the opportunities and concepts of such a product.
 
-The other tests the group performed, were chosen because the group prepared for the acceptance test. These test methods was software inspection, regression testing, usability test and system test. 
- 
+As a result of preparing for the acceptance test, other tests were conducted. These test were software inspection, regression testing, usability test and system test. 
 
 \subsection{Software Inspection}
 \label{software_inspection}
-An software inspection is review or inspection of the product. During the software inspection the inspectors write down all the errors that are detected. \cite{softwareInspection}.
+Software inspection is a review or inspection of the product. During the software inspection, the inspectors write down all the errors that are detected \cite{softwareInspection}.
 
 \subsection{Regression Test}
 \label{regression_test}
-Regression testing is testing to verify that errors which have been corrected is actually corrected and that any new errors have not been introduced. This testing method is to ensure that the component still works after the specified requirements \cite{regressionTest}.
+Regression testing is conducted to verify that errors which have been found during software inspection, are correctly fixed without introducing new errors to the product. This ensures that the components still works after the specified requirements \cite{regressionTest}.
 
 \subsection{Usability Test}
-Usability testing is to see how easy something is to use, it is conducted by testing with real users \cite{usabiliyTest}. To evaluate usability a system usability scale can be used.
+Usability testing is used to measure how easy the product is to use. The testing is conducted with real users \cite{usabiliyTest}. To evaluate usability a system usability scale can be used.
 
 \subsection{System Test}
 \textit{"System test it the process of testing an integrated system to verify that it meets specified requirement"} \cite{systemTest}. A system test is preformed after the coding is complete, using test cases. 
 
 \subsection{Acceptance Test}
-Acceptance testing is testing the requirements and that the product satisfies the users needs \cite{acceptanceTesting}. \textit{"After the system test has corrected all or most defects, the system will be delivered to users or customer for acceptance testing or user acceptance testing"} \cite{acceptanceTestingDefinition}. A focus group, an acceptance method, is a form of qualitative research consisting of interviews in which the participants are asked about their perceptions, opinions, beliefs, and attitudes towards the product, and concept \cite{focusGroup}.
-
+Acceptance testing is used to confirm that the requirements and the product satisfies the users needs \cite{acceptanceTesting}. \textit{"After the system test has corrected all or most defects, the system will be delivered to users or customer for acceptance testing or user acceptance testing"} \cite{acceptanceTestingDefinition}. A focus group, which is an acceptance method, is a form of qualitative research consisting of interviews. The participants are asked about their perceptions, opinions, beliefs, and attitudes towards the product and concept \cite{focusGroup}.
 
 
 \section{Test Risk Analysis}
-The group created a test risk analysis table (see table \ref{Test_Risk_Analysis}), to see what to priorities when solving the errors. When delivering the solution back to the customer the group aimed to have zero critical errors (red), 2 medium errors (yellow) and 6 low errors (green), because a system can never have zero errors. The errors detected under Before Focus Group With Families test (see \ref{before_focus_group_with_families}) were rated based on impact and likelihood, together the two values made the importance. This number decided if the error were low (1 an 26), medium (27 to 53) or critical (54 to 81).
+The group created a test risk analysis table (see table \ref{Test_Risk_Analysis}), to see what to prioritize when solving the errors. When delivering the solution back to the customer the group aimed to have at most; zero critical errors (red), 2 medium errors (yellow) and 6 low errors (green). The errors detected under the first focus group conducted with the families (see section \ref{before_focus_group_with_families}) were rated based on impact and likelihood. Together the two values made the importance. This number decided if the error was low (1 to 26), medium (27 to 53) or critical (54 to 81). The errors detected can be found in appendix \ref{apendix_testing}.
+
 
 \begin{longtable}{@{\extracolsep{\fill}}
                 |L{0.08\linewidth}
@@ -65,39 +65,8 @@ The group created a test risk analysis table (see table \ref{Test_Risk_Analysis}
 \end{longtable}
 
 
-%\begin{longtable}{@{\extracolsep{\fill}}
-%                |L{0.34\linewidth}
-%                |L{0.15\linewidth}
-%                |L{0.15\linewidth}
-%                |L{0.24\linewidth}|@{}}
-%                
-%\hline
-%\rowcolor{Gray}
-%\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & %\textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance %{\footnotesize (Likelihood * Impact)}} \\
-%\hline
-%Log in with Facebook & 2 & 8 & 16\\
-%\hline
-%See all and filter activities & 6 & 9 & 54\\
-%\hline
-%See all and filter providers & 6 & 9 & 54\\
-%\hline
-%See providers you are following & 6 & 4 & 24\\
-%\hline
-%Create and edit activities & 6 & 8 & 48\\
-%\hline
-%See information about one activity & 5 & 7 & 35\\
-%\hline
-%Give feedback on an activity & 4 & 4 & 16\\
-%\hline
-%\caption{Test functional analysis}
-%\label{Test_Functional_Analysis}
-%\end{longtable}
-
-
-
-
 \section{Test Plan}
-A test plan (see table \ref{Test_Plan}) were create to get an overview of when focus groups were to be performed during the project and to what time. The test plan also gave an overview of which other test methods were to be performed.
+A test plan (see table \ref{Test_Plan}) was created to get an overview of when focus groups were to be conducted. The test plan also gave an overview of which other test methods were to be performed.
 
 \begin{longtable}{@{\extracolsep{\fill}}
                 |L{0.20\linewidth}
@@ -129,48 +98,44 @@ A test plan (see table \ref{Test_Plan}) were create to get an overview of when f
 Test cases were used (see appendix \ref{test_cases}) for system test, and based on the user stories (see \ref{User stories}).
 
 
-
 \section{Test Execution}
-In the initial plan the group wanted to conduct the acceptance tests during sprint 3, but the providers and families were not able to participate at this time. Therefore the tests were postponed to 6th of April for providers and system maintainers in sprint 4 and to the 21st og April in sprint 5 with the families.
-
+The initial plan was to conduct the acceptance tests during sprint 3, but the providers and families were not able to participate at this time. Therefore the tests were postponed to the 6th of April (sprint 4) for providers and system maintainers, and to the 21st of April (sprint 5) with the families.
 
 \subsection{Before Focus Group With Providers And System Maintainers}
 \label{before_focus_group_with_providers}
-The group arranged a workshop, where the group members attended. This workshop were arranged with the goal to check functionality and to prepare for the focus group with the providers and system maintainers. During this the group arrange software inspection (see \ref{software_inspection}), the team both tested the test cases and freely. All the errors which were detected were written down in waffle.io (see \ref{Waffle.io}) and corrected before the focus group with the providers and system maintainers.
+The group planned to arrange a workshop, with the purpose of checking functionality, and to prepare for the focus group with the providers and system maintainers. During the preparation the group conducted a software inspection (see \ref{software_inspection}). This included manual testing and verifying the test cases. All the errors detected were written down in Waffle.io (see \ref{Waffle.io}) and corrected before the focus group with the providers and system maintainers.
 
-After the errors were corrected the group performed regression tests (see \ref{regression_test}). Here the group tested if the errors were corrected and no new errors were introduced.
+After the errors were corrected, the group performed regression tests (see \ref{regression_test}). Here the group tested if the errors were corrected and that no new errors were introduced.
 
 
 \subsection{Focus Group With Providers and System Maintainers}
 \label{focusGrouoProviders}
-During this workshop Norstein and Skaugvoll participated together with three representatives from Trondheim kommune and the customer, Babak Farshchian. One of the representatives from Trondheim kommune worked on the Aktørdatabase (see \ref{Aktordatabasen})
+During this workshop Norstein and Skaugvoll participated together with three representatives from Trondheim kommune and the customer, Babak Farshchian. One of the representatives from Trondheim kommune worked on the Aktørdatabase (see \ref{Aktordatabasen}).
 
-The workshop were arranged to get feedback on the usability, if the functionality implemented were useful and matched what they envisioned for the project and not to find errors.
+The workshop was arranged to get feedback on the usability, and if the functionalities implemented were useful and matched what the providers envisioned for the project. Finding errors was not a part of this workshop.
 
-The test cases were presented as scenarios, which then Norstein and Skaugvoll presented by showing the product. The proposals were discussed and the group received feedback on what to improve and feature requests for the future. see note from focus group in appendix XX
+The test cases were presented as scenarios, which Norstein and Skaugvoll presented by showing the product. The product concepts were discussed and the group received feedback on what to improve and feature requests for the future. The response from customer, providers and system maintainers were that the concepts had a positive effect and that skalvi.no is heading in the right direction. They were surprised with how much the group had done and the state of web portal. See notes from focus group in appendix \ref{workshop_with_providers_and_system_maintainers_appendix}
 
 
 \subsection{Before Focus Group With Families}
 \label{before_focus_group_with_families}
-The pre-focus group with families were arranged similarly as before focus group with providers (see \ref{before_focus_group_with_providers}). First the group arrange software arrangement (see \ref{software_inspection}) and then regression test (see \ref{regression_test}). 
+The preparations for the focus group with families were arranged in the same manner as when planning the focus group with providers (see \ref{before_focus_group_with_providers}). First the group arranged software inspection (see \ref{software_inspection}) and then regression tests (see \ref{regression_test}). 
 
-During the software inspection the group wrote down all the errors and used time to priorities and correct them (see appendix \ref{errors_detected_during_pre-focus_group_families}). During the software inspection the group detected 29 errors, 19 were low errors. The group fixed 18 of these errors, "Buttons does not have right styling" was not fixed, because the error does not have any inluence on the functionality. The group also stated in test risk analysis (see \ref{Test_Risk_Analysis}) that the delivering product could have 6 low errors. 8 of the errors were medium type, of them 2 were not fixed, "The import from Facebook box does not always show" and  "Activity type should be required when creating", because he group could not detect when the error appeared and not. The software inspection also detected two critical errors, "Instagram does not works" and "Navbar does not show that the user is logged in on administer provider". These errors the group prioritized and corrected right away.
+During the software inspection the group wrote down all the errors and used time to prioritize and correct them (see appendix \ref{errors_detected_during_pre-focus_group_families}). The software inspection resulted in detecting a total of 29 errors; 19 low, 8 medium, and 2 critical errors. The group fixed all errors except one low and two medium errors. The last low error, "Buttons does not have right styling" was not fixed, because the error did not have any influence on the functionality. The medium errors, "The import from Facebook box does not always show" and "Activity type should be required when creating", were not fixed because the errors were inconsistent. The critical errors, "Instagram does not works" and "Navbar does not show that the user is logged in on administer providers page" were prioritized and corrected right away.
 
 
 \subsection{Focus Group With Families}
-\label{focusGroup}focusGrouoProviders
-The user acceptance tests was conducted as a workshop with focus group. Three families attended, with four parents and three children, the customer, Babak Farshchian and a representative from Trondheim kommune, together with Andresen, Skaugvoll, Skar, Stigen and Wold.  The goals for the focus group were to show a small group of potential users features the product could have, and get valuable feedback on what is working, not working, missing or not going to be used, for such a product to be successful.
+\label{focusGroup}
+The user acceptance tests was conducted as a workshop. Three families attended, with four parents and three children. The customer, Babak Farshchian and a representative from Trondheim kommune also attended, together with Andresen, Skaugvoll, Skar, Stigen and Wold. The goal for the focus group, was to show a small group of potential users which features the product could have. It was also important to get feedback on what was working, not working, missing or unnecessary, for such a product to be successful.
 
-The focus group were also used to gain ideas to further development (see XX). 
+The focus group was also used to gather ideas for further development (see chapter \ref{proposal_for_future_features}). 
 
-During the focus group the users were separated into two groups, parents and children, and questions were asked where the participants were free to talk among them selves and test the product on a computer provided by the group. The group took notes and recorded the vital points gotten from the participant discussions.
+During the focus group, the users were separated into two groups, parents and children. The test groups were free to talk among themselves and test the product on a computer provided by the group. The group took notes and recorded the crucial points from the participants discussions.
 
-After the focus group were conducted the users answered a system usability scale form, see appendix XX for the form and the answers from the users. The usability score were converted to percent, and then calculated the average. From the seven people who attended and answered the system usability scale form the group received an average of 91.9\% This is not a valid number due to few attending, but gives an indication that the product is needed and on the right track.
-
+After the focus group was conducted, the users answered a system usability scale form, see appendix \ref{workshop_with_families_appendix} for the form and the answers from the users. The usability score was converted into percent, and the averages were calculated. From the seven people who attended and answered the system usability scale form, the group received an average of 91.9\% This is not a valid number due to few attendants, but it gave an indication that the product concepts were proven relevant and on the right track.
 
 \subsection{System Test}
-Test cases test
-The system test were conducted after the focus groups and a code review. This was done using the test cases (see appendix \ref{test_cases}). The tests were run (see table \ref{test_case}), the passed tests are green. 
+After the focus groups and a code review the system tests were conducted. This was done by using the test cases (see appendix \ref{test_cases}). The tests executed were (see table \ref{test_case}), the passed tests are green. 
 
 \begin{longtable}{@{\extracolsep{\fill}}
                 |L{0.45\linewidth}

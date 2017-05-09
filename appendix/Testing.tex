@@ -1,204 +1,7 @@
 \chapter{Testing}
+\label{apendix_testing}
 \settocdepth{chapter}
 
-\section{Errors Detected During Pre-Focus Group Families}
-\label{errors_detected_during_pre-focus_group_families}
-
-\subsubsection{Front page}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk{\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-Unnecessary console log on front page & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
-\hline
-Sort activities on front page based on date & 5 & 6 & \cellcolor[HTML]{FFD966}30 & Fixed \\
-\hline
-Activities that has been should not be visible & 6 & 6 & \cellcolor[HTML]{FFD966}36 & Fixed \\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_4}
-\end{longtable}
-
-
-\subsubsection{Activities}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-Unnecessary console log on front page & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
-\hline
-Should have margin between last activity card and footer & 2 & 2 & \cellcolor[HTML]{b6d7a8}4 & Fixed \\
-\hline
-Change input fields to be same on all pages & 1 & 3 & \cellcolor[HTML]{b6d7a8}3 & Fixed \\
-\hline
-Calendar should be in Norwegian & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_5}
-\end{longtable}
-
-
-\subsubsection{Activity Modal}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-Year should be displayed below date & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
-\hline
-Comment does not show immediately & 7 & 7 & \cellcolor[HTML]{FFD966}49 & Fixed \\
-\hline
-The modal becomes large if information text is long, should have a show more button  & 5 & 3 & \cellcolor[HTML]{b6d7a8}15 & Fixed \\
-\hline
-Remove ";" which stands after the star on rate an activity  & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_6}
-\end{longtable}
-
-
-\subsubsection{Create Activity}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-The import from Facebook box does not always show & 3 & 9 & \cellcolor[HTML]{FFD966}27 & Not fixed, can not reproduce \\
-\hline
-Instagram does not work & 7 & 9 & \cellcolor[HTML]{e06666}63 & Fixed \\
-\hline
-Images from Facebook does not appear the first time, appears when activity is edited & 5 & 7 & \cellcolor[HTML]{FFD966}35 & Fixed \\
-\hline
-Title has wrong font & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
-\hline
-Activity type should be required when creating & 3 & 7 & \cellcolor[HTML]{FFD966}21 & Not fixed, argument is proof of concept. \\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_7}
-\end{longtable}
-
-
-\subsubsection{Provider}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-Alginment between filter, providers and load more button is not correct & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
-\hline
-Follow provider button should have margin around & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
-\hline
-Fix styling for one provider & 2 & 2 & \cellcolor[HTML]{b6d7a8}4 & Fixed \\
-\hline
-Change input fields to be same on all pages & 1 & 3 & \cellcolor[HTML]{b6d7a8}3 & Fixed \\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_8}
-\end{longtable}
-
-
-
-\subsubsection{Administer Provider}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-Navbar does not show that the user is logged in on this page & 8 & 9 & \cellcolor[HTML]{e06666}72 & Fixed \\
-\hline
-Buttons does not have right styling & 3 & 5 & \cellcolor[HTML]{b6d7a8}15 & Not fixed, due to time and proof of concept \\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_9}
-\end{longtable}
-
-
-
-
-\subsubsection{Register User}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-Two bottom checkboxes does not work, must click on text & 4 & 8 & \cellcolor[HTML]{FFD966}32 & Fixed \\
-\hline
-Should not have to create both user name and profile name & 2 & 7 & \cellcolor[HTML]{b6d7a8}14 & Fixed\\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_10}
-\end{longtable}
-
-
-\subsubsection{My Page}
-\begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.40\linewidth}
-                |L{0.10\linewidth}
-                |L{0.10\linewidth}
-                |L{0.15\linewidth}
-                |L{0.15\linewidth}|@{}}
-                
-\hline
-\rowcolor{Gray}
-\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
-\hline
-E-mail and surname does not show when logged in with Facebook & 2 & 2 & \cellcolor[HTML]{b6d7a8}4 & Fixed \\
-\hline
-Phone number should not display none when not filled in & 3 & 4 & \cellcolor[HTML]{b6d7a8}12 & Fixed \\
-\hline
-Same picture on all profiles on one user & 4 & 4 & \cellcolor[HTML]{b6d7a8}16 & Fixed \\
-\hline
-Footer does not have margin when not attending any activity & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
-\hline
-When user has only one profile the profile does not become active & 5 & 8 & \cellcolor[HTML]{FFD966}40 & Fixed\\
-\hline
-\caption{Errors found during software inspection}
-\label{Errors_Software_Inspection_11}
-\end{longtable}
 
 \section{Test Cases}
 \label{test_cases}
@@ -559,5 +362,249 @@ When user has only one profile the profile does not become active & 5 & 8 & \cel
 \caption{Test case 15}
 \label{TC15}
 \end{longtable}
+
+\section{Errors Detected During Pre-Focus Group Families}
+\label{errors_detected_during_pre-focus_group_families}
+
+\subsubsection{Front page}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk{\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+Unnecessary console log on front page & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
+\hline
+Sort activities on front page based on date & 5 & 6 & \cellcolor[HTML]{FFD966}30 & Fixed \\
+\hline
+Activities that has been should not be visible & 6 & 6 & \cellcolor[HTML]{FFD966}36 & Fixed \\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_4}
+\end{longtable}
+
+
+\subsubsection{Activities}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+Unnecessary console log on front page & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
+\hline
+Should have margin between last activity card and footer & 2 & 2 & \cellcolor[HTML]{b6d7a8}4 & Fixed \\
+\hline
+Change input fields to be same on all pages & 1 & 3 & \cellcolor[HTML]{b6d7a8}3 & Fixed \\
+\hline
+Calendar should be in Norwegian & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_5}
+\end{longtable}
+
+
+\subsubsection{Activity Modal}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+Year should be displayed below date & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
+\hline
+Comment does not show immediately & 7 & 7 & \cellcolor[HTML]{FFD966}49 & Fixed \\
+\hline
+The modal becomes large if information text is long, should have a show more button  & 5 & 3 & \cellcolor[HTML]{b6d7a8}15 & Fixed \\
+\hline
+Remove ";" which stands after the star on rate an activity  & 1 & 1 & \cellcolor[HTML]{b6d7a8}1 & Fixed \\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_6}
+\end{longtable}
+
+
+\subsubsection{Create Activity}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+The import from Facebook box does not always show & 3 & 9 & \cellcolor[HTML]{FFD966}27 & Not fixed, can not reproduce \\
+\hline
+Instagram does not work & 7 & 9 & \cellcolor[HTML]{e06666}63 & Fixed \\
+\hline
+Images from Facebook does not appear the first time, appears when activity is edited & 5 & 7 & \cellcolor[HTML]{FFD966}35 & Fixed \\
+\hline
+Title has wrong font & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
+\hline
+Activity type should be required when creating & 3 & 7 & \cellcolor[HTML]{FFD966}21 & Not fixed, argument is proof of concept. \\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_7}
+\end{longtable}
+
+
+\subsubsection{Provider}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+Alginment between filter, providers and load more button is not correct & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
+\hline
+Follow provider button should have margin around & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
+\hline
+Fix styling for one provider & 2 & 2 & \cellcolor[HTML]{b6d7a8}4 & Fixed \\
+\hline
+Change input fields to be same on all pages & 1 & 3 & \cellcolor[HTML]{b6d7a8}3 & Fixed \\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_8}
+\end{longtable}
+
+
+
+\subsubsection{Administer Provider}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+Navbar does not show that the user is logged in on this page & 8 & 9 & \cellcolor[HTML]{e06666}72 & Fixed \\
+\hline
+Buttons does not have right styling & 3 & 5 & \cellcolor[HTML]{b6d7a8}15 & Not fixed, due to time and proof of concept \\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_9}
+\end{longtable}
+
+
+
+
+\subsubsection{Register User}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+Two bottom checkboxes does not work, must click on text & 4 & 8 & \cellcolor[HTML]{FFD966}32 & Fixed \\
+\hline
+Should not have to create both user name and profile name & 2 & 7 & \cellcolor[HTML]{b6d7a8}14 & Fixed\\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_10}
+\end{longtable}
+
+
+\subsubsection{My Page}
+\begin{longtable}{@{\extracolsep{\fill}}
+                |L{0.40\linewidth}
+                |L{0.10\linewidth}
+                |L{0.10\linewidth}
+                |L{0.15\linewidth}
+                |L{0.15\linewidth}|@{}}
+                
+\hline
+\rowcolor{Gray}
+\textbf{Description} & \textbf{Likelihood {\footnotesize (1-9)}} & \textbf{Impact {\footnotesize (1-9)}} & \textbf{Importance and Risk {\footnotesize (Likelihood * Impact)}} & \textbf{Correction Status} \\
+\hline
+E-mail and surname does not show when logged in with Facebook & 2 & 2 & \cellcolor[HTML]{b6d7a8}4 & Fixed \\
+\hline
+Phone number should not display none when not filled in & 3 & 4 & \cellcolor[HTML]{b6d7a8}12 & Fixed \\
+\hline
+Same picture on all profiles on one user & 4 & 4 & \cellcolor[HTML]{b6d7a8}16 & Fixed \\
+\hline
+Footer does not have margin when not attending any activity & 1 & 2 & \cellcolor[HTML]{b6d7a8}2 & Fixed \\
+\hline
+When user has only one profile the profile does not become active & 5 & 8 & \cellcolor[HTML]{FFD966}40 & Fixed\\
+\hline
+\caption{Errors found during software inspection}
+\label{Errors_Software_Inspection_11}
+\end{longtable}
+
+\section{Focus Group With Providers and System Maintainers}
+\label{workshop_with_providers_and_system_maintainers_appendix}
+The workshop were held in Norwegian and therefore the notes are in Norwegian.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.85\textwidth]{fig/focusgroup/FGProviders.pdf}
+    \caption{Notes from focus group with providers and system maintainers}
+    \label{Providers_1}
+\end{figure}
+
+\section{Focus Group With Families}
+\label{workshop_with_families_appendix}
+The workshop were held in Norwegian and therefore the notes are in Norwegian.
+
+\subsection{Children}
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.85\textwidth]{fig/focusgroup/FGChildren_1.pdf}
+    \caption{Notes from focus group with children page one}
+    \label{Children_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.85\textwidth]{fig/focusgroup/FGChildren_2.pdf}
+    \caption{Notes from focus group with children page two}
+    \label{Children_2}
+\end{figure}
+
+\subsection{Parents}
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.85\textwidth]{fig/focusgroup/FGParents_1.pdf}
+    \caption{Notes from focus group with parents page one}
+    \label{Parents_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.85\textwidth]{fig/focusgroup/FGParents_2.pdf}
+    \caption{Notes from focus group with parents page two}
+    \label{Parents_2}
+\end{figure}
 
 \cleardoublepage

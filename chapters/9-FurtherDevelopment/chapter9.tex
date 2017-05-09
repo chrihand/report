@@ -4,81 +4,87 @@
 \label{further_development}
 
 \section{Proposal For Future Features}
-After the group conducted focus groups with providers (see \ref{focusGrouoProviders}) and families (see \ref{focusGroup}), the group got a lot of good feedback from the users. Both the families and the providers had long discussions about how to the group could improve the product and what kind of features that could be implemented. Proposals for these further features will be introduced in this section. Some of the proposals are also requests from the customer.
+\label{proposal_for_future_features}
+After the group conducted focus groups with providers and system maintainers (see section \ref{focusGrouoProviders}) and families (see section \ref{focusGroup}), the group got a lot of feedback from the users. Both providers and families had discussions about how the group could improve the product and what kind of features could be implemented in the future. Proposals for these features will be introduced in this section and is grouped by milestones on GitHub (see table \ref{MilestonesForFurterDevelopment}). Some of the proposals are requests from the customer.
 
-\subsection{Milestones For Furter Development}
+\subsection{Milestones For Further Development}
+\label{milestones_for_further_development}
 \begin{longtable}{@{\extracolsep{\fill}}
-                |L{0.10\linewidth}
                 |L{0.15\linewidth}
-                |L{0.65\linewidth}|@{}}
+                |L{0.85\linewidth}|@{}}
 \hline
 \rowcolor{Gray}
-\textbf{Date} & \textbf{Milestone} & \textbf{Description} \\
+\textbf{Milestone} & \textbf{Theme}\\
 \hline
-\textbf{--} & Milestone 6 & Automatic filtering based on user profile facilitation \\
+Milestone 6 & Automatic filtering based on user profile facilitation \\
 \hline
-\textbf{--} & Milestone 7 & Activities information. Update activity-card and -modal based on feedback from focus-group (see \ref{UserFeedbackAboutActivities}).  \\
+Milestone 7 & Activities information. Update activity-card and -modal based on feedback from focus-group (see \ref{UserFeedbackAboutActivities}).  \\
 \hline
-\textbf{--} & Milestone 8 & Creating and sharing activities \\
+Milestone 8 & Creating and sharing activities \\
 \hline
-\textbf{--} & Milestone 9 & Verify providers \\
+Milestone 9 & Verify providers \\
 \hline
-\textbf{--} & Milestone 10 & Provider metadata \\
+Milestone 10 & Provider metadata \\
 \hline
-\textbf{--} & Milestone 11 & Plugins \\
+Milestone 11 & Plugins \\
 \hline
-\textbf{--} & Milestone 12 & Code enhancement \\
+Milestone 12 & Code enhancement \\
 \hline
-\textbf{--} & Milestone 13 & Moderating \\
+Milestone 13 & Moderating \\
 \hline
-\textbf{--} & Milestone 14 & Code review \\
+Milestone 14 & Code review \\
 \hline
 \caption{Milestones for further development}
 \label{MilestonesForFurterDevelopment}
 \end{longtable}
 
 \subsection{User Facilitation}
-Milestone 6 is a really important project milestone that needs to be implemented. The milestone and feature was created based on feedback from the focus-group with families (see \ref{focusGroup}). Both parents and children came to the conclusion that facilitation can and should be represented by symbols. For how the user thinks facilitation has to be displayed, see \ref{UserFeedbackAboutActivities}. 
+\label{UserFacilitation}
+User facilitation is an important part of the product, and has the highest priority for further development. Based on feedback from the focus group with families (see section \ref{focusGroup}), both parents and children came to the conclusion that facilitation can and should be represented by symbols (see section \ref{UserFeedbackAboutActivities}). They also came up with the idea about automatic filtering of activities and providers by customized user profile facilitation.
 
-Milestone 6 builds further on facilitation, and adds to the web portal a feature that has the highest of prioritize for further development. When a user registers a new profile to their family user, the user register what facilitation the profile owner has. Then when the newly created profile wants to see what activities is upcoming, and search for activities, only the ones, that has facilitation for the profile registered needs are shown. This feature is something the profile should be able to turn of, or bypass, such that they can see all activities as well, if wanted.
+Milestone 6 builds further on facilitation, and and adds features to the web portal that has the highest priority for further development. When the newly created profile wants to see upcoming activities and search for activities, only the ones that fits the user profile's facilitation are displayed. This feature is something the profile should be able to turn off, or bypass, such that they can see all activities as well.
 
-To implement this, there needs to be implemented a facilitation field on the userprofile model in the database, a selection area in the "Opprett ny profil" page, and when loading activities, and the filter "Velg tilrettelegging" gets the user facilitation fields. This way the user sees what facilitation is active, and can decide to remove them wanted. 
+To implement this, a way to add facilitation to user profiles is needed. Default search on activity- and provider-page should be with the user profile facilitation, but this filter can be turned off.
 
 \subsection{Activities}
 \subsubsection{Information}
 \label{UserFeedbackAboutActivities}
-The feedback on how the activities were presented on the web portal gave basis for new ideas and improvements. A shared view among the test users was the importance of showing information as early and clearly as possible. This was especially important when it came to the facilitation of an activity. The users testing the web portal wanted this information displayed already on the activity card.
+The feedback on how the activities were presented on the web portal gave basis for new ideas and improvements. A shared view amongst the test users was the importance of showing user facilitation as early and clearly as possible. The users who tested the web portal, wanted this information displayed already on the activity card (see user manuals in Appendix \ref{user_manual}).
 
-There was also a good discussion around whether to use symbols or text to display the activity facilitations. While the test group did not come to an agreement on the best solution for this, some guidelines for further development were noted. 
+There was also a good discussion around whether to use symbols or text to display the activity facilitations. The test group came up with a conclusion that further development should test displaying user facilitation with only symbols on activity-card and -modal(see user manuals in Appendix \ref{user_manual}). A textual description of the symbols should also be represented on the front page along with the symbols.
 
-Information regarding the number of assistants was seen at as superfluous. The general wish was to instead add information about whether or not a personal supervisor was needed when attending an activity.
+Information regarding the number of assistants was seen on as superfluous (see section \ref{removals}). The general wish was to instead add information about whether or not a personal supervisor was needed when attending an activity.
 
 \subsubsection{Creating And Sharing}
+The test group also wanted the opportunity to see other users attending an event. This can be accomplished by showing if friends from Facebook are attending. Another request was the opportunity to share an event from the web portal to Facebook and other social media.
 
+For further development there were also some requests regarding events. Creating an event based on already existing events was very popular. This would allow for minimal work if users or providers have previously created many similar events. 
 
-- Who is participating
-- Create based on existing
-- Create based on other social media (more support to other platforms)
-- Share from Skalvi to Facebook
+The opportunity for creating an event based on a Facebook event was much appreciated. Further improving this functionality, and adding additional support for using other social media as well, would improve the overall user experience.
 
 \subsection{Providers}
 \subsubsection{Information}
-During the focus group with the providers (see \ref{focusGrouoProviders}), they said that providers need to register city-location in Aktørdatabasen (see \ref{Aktordatabasen}). Therefore they wanted a feature on skalvi.no where users can search for providers by city-location. This is also a feature that the families requested on the focus group with families (see \ref{focusGroup}), so they easily could find activities close to where they live. Additionally the families wanted more contact-information about the provides on each activity.  The providers also wanted a way to see which users who are following a specific provider.
-For future development, there should be implemented a new filter to search on city-location, as long as providers actually register their location and methods to retrieve and display which users are following a provider.
+During the focus group with the providers and system maintainers (see \ref{focusGrouoProviders}), the system maintainers for Aktørdatabasen (see \ref{Aktordatabasen}) said that providers need to register city-location in Aktørdatabasen. Therefore they wanted a feature on skalvi.no where users can search for providers by city-location. This is also a feature that the families requested on the focus group with families (see \ref{focusGroup}), so they easily could find activities close to where they live. Additionally the families wanted more contact-information about the providers on each activity. The providers also wanted a way to see which users are following them.
+
+For future development, there should be implemented a new filter to search on city-location and features to retrieve and display which users are following a provider.
 
 \subsubsection{Verification}
-The customer have requested at the end of the project that he wanted a way to show that a provider is actually using skalvi.no and if an activity is created by a specific provider. The verification will therefore allow users to see if a provider has created an activity or if another user created it. For a user to see this, there have to be an icon that displays this on each activity that is created by a verified provider. The same icon should also be on each page for verified providers. Additionally, each provider need to fill in what kind of facilitations they offer when registering as a provider on skalvi.no, because there is a lot of focus on faciliation on skalvi.no. A filter for verified providers should also be implemented.
+At the end of the project, the customer requested that he wanted the product to display that a provider is actually using skalvi.no, and if an activity is actually created by a verified provider. The verification will therefore allow users to see if a provider has created an activity or if another user created it. Thus filter for verified providers should be implemented. For a user to see this, there has to be an icon that displays this on each activity that is created by a verified provider. The same icon should also be on each page for verified providers. Each provider needs to fill in what kind of facilitations (see section \ref{UserFacilitation}) they offer when registering as a provider on skalvi.no. 
 
 
 \subsection{Moderating Comments}
-The parent who attended the focus group with families (see \ref{focusGroup}) was concerned about the comments for each activity. They said that other people often tend to write negative and non-constructive comments if they are displeased with an activity they attended. Therefore the parents requested a feature for moderating function that does not allow users to write these kind of comments. For this to be implemented in the future, there are two ways to do it. There must either be actual people moderating and removing negative comment, or there must be implemented methods that automatically detects negative comments and does not allow the user to post it. 
+The parents who attended the focus group with families (see \ref{focusGroup}) was concerned about the comments for each activity. They said that other people often tend to write negative and non-constructive comments if they were displeased with an activity they attended. Therefore the parents requested a feature that does not allow users to write these kind of comments. 
+
+To reduce the risk of negative and non-constructive comments, skalvi.no does not allow anonymous to post comments on activities. A user must be logged in to write comments, and their name is display on each comment he or she posts. Therefore a user needs to think twice before posting these kind of comments. 
+
+For this to be perfected in the future, there are two ways to do it. There must either be actual people moderating and removing negative comment, or there must be implemented methods that automatically detects negative comments and does not allow the user to post it. 
 
 \subsection{Plugins}
-The customer has been very eager from the beginning of the project that skalvi.no should be compatible with social media functionalities and different kind of plugins. Additionally to the existing solutions that skalvi.no have, the customer want providers to have the opportunity to add, for exaple a calendar where all their activities are registered. When a provider adds a calendar to skalvi.no, the provider can then choose an activity from the calendar when creating an activity.
+The customer has been very eager from the beginning of the project that skalvi.no should be compatible with social media functionalities and different kinds of plugins. Additionally to the existing solutions that skalvi.no have, the customer wants providers to have the opportunity to add, for example a calendar where all their activities are registered. When a provider adds a calendar to skalvi.no, the provider can then choose an activity from the calendar to base their new activities on.
 
 \section{Privacy Policy}
-A privacy policy is a statement or legal document that discloses how a website collects, uses, discloses and manages a customers or client's data. A web page that collect user data that can be used to identify individuals is required to provide a privacy policy.
+A privacy policy is a statement or legal document that discloses how a website collects, uses, discloses and manages a customers or client's data. A web page that collects user data that can be used to identify individuals is required to provide a privacy policy.
 
-For the web portal to go into production, writing a privacy policy and providing this on the web portal would be required. This would also fulfill Facebook and Instagram's requirements for using their APIs to exit development mode and go into production. Allowing users outside the registered testers to interact with the functionality the APIs provide.
+For the web portal to go into production, writing a privacy policy and providing this on the web portal would be required. This would fulfill Facebook and Instagram's requirements for using their APIs to exit development mode and go into production. This will allow users outside the registered test users and developers to interact with the functionalities the API provide.
 
 \cleardoublepage
