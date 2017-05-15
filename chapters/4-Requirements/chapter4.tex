@@ -2,18 +2,21 @@
 
 \chapter{Requirements}
 \label{requirements}
+This chapter describes the requirements for the product. Consisting of a definition of the Minimum Viable Product, the functional- and non-functional requirements, and changes made to the requirements.
 
 \section{Minimum Viable Product}
 \label{MVP}
 The group represented their commitment and shared goal by specifying a definition of the Minimum Viable Product (denoted as MVP), which had to be delivered when the project was due. The first MVP was defined during sprint 0 (see section \ref{sprint0}), and was further defined as the project developed. See Appendix \ref{original_minimal_viable_product} for the first MVP, the final definition is presented below. 
 
-\textit{ The MVP the group is to deliver is a web portal with a homepage, an overall activity page, an overall provider page, create activity page, and profile pages. The web portal's homepage presents upcoming events to the user. The portal is a user account service; meaning the information on the homepage depends on the user logged in, such as 'my attending activities' if the user are attending some. User is allowed to log in using an Facebook account, such that no one are required to create accounts to use the portal. The portal will have pages displaying all registered activities and providers, which allows for search and filtering. The portal allows providers to create activities, either from scratch or based on Facebook events, which are presented to all users. }
+\textit{The MVP the group is to deliver is a web portal with a homepage, an overall activity page, an overall provider page, create activity page, and profile pages. The web portal's homepage presents upcoming events to the user. The portal is a user account service; meaning the information on the homepage depends on the user logged in, such as 'my attending activities' if the user are attending any. Users are allowed to log in using an Facebook account, such that no one are required to create accounts to use the portal. The portal will have pages displaying all registered activities and providers, which allows for search and filtering. The portal allows providers to create activities, either from scratch or based on Facebook events, which are presented to all users.}
 
 \textit{The design of the portal, will be under the WCAG 2.0 protocol, which state rules for universal design.}
 
-\section{Functional requirements}
+\section{Functional Requirements}
 \label{functional_requirements}
-This section contains the functional requirements for the product, which specifies what the system should do \cite{requirements}. These were made by the group, based on experiences from the workshop with the users (see section \ref{WorkshopUserAndProviders}) and customer input (see section \ref{Customer input}). The requirements were further verified by the customer, whom also added some he thought were important. These are as follows:
+This section contains the functional requirements for the product, which specifies the behavior of the system \cite{requirements}. These were made by the group, based on experiences from the workshop with the users and customer input. The requirements were further verified by the customer, who also added some he thought were important. 
+
+These are as follows:
 \begin{itemize}[noitemsep]
     \item Log in.
     \item See complete list of activities, and filter these.
@@ -27,7 +30,7 @@ This section contains the functional requirements for the product, which specifi
 
 \subsection{User Stories}
 \label{User stories}
-The group created user stories (see tables \ref{User_Stories_login} to \ref{User_Stories_General}) based on the functional requirements. These were further verified by the customer, whom also added priorities to guide the group. The user stories contains ID to identify each one. Since the importance of different user functionalities had been especially emphasized during the workshop; the group decided to separate the user stories based on different user groups. This included the general user (US.xx), children(CH.xx), parents(PA.xx), providers(PR.xx) and system maintainers(SM.xx). The acceptance criteria are the criteria which have to be fulfilled for the user story to be categorized as done. The group also defined definitions of when a user story is ready and of when a user story is done, see Appendix \ref{user_story_definition}. The group actively used these definitions during the development; to ensure the group that what is being created was a necessity, and when to declare it as complete and proceed to the next issue.  
+The group created user stories (see tables \ref{User_Stories_login} to \ref{User_Stories_General}) based on the functional requirements. These were then verified by the customer, who also added priorities to guide the group. The user stories contain ID's to identify each one. Since the importance of different user functionalities had been especially emphasized during the workshop, the group decided to separate the user stories based on different user groups. This included the general user (US.xx), children(CH.xx), parents(PA.xx), providers(PR.xx) and system maintainers(SM.xx). The acceptance criteria are the criteria which have to be fulfilled for the user story to be categorized as done. The group also defined definitions of when a user story is ready and of when a user story is done, see Appendix \ref{user_story_definition}. The group actively used these definitions during the development; to ensure the group that what is being created was a necessity, and when to declare it as complete and proceed to the next user story.  
 
 The user stories are all listed below, in respect to the functional requirements. 
 
@@ -191,7 +194,7 @@ US.05 & \textbf{As a} user, \textbf{I want} to be able to easily navigate betwee
 \hline
 SM.00 & \textbf{As a} system maintainer, \textbf{I want}  easily install the system in a virtual private server, \textbf{so that} I can easily give access to others. & An installation guide on how to install the system is in appendix \ref{Installation Guide}. & 100 \\
 \hline
-SM.01 & \textbf{As a} system maintainer, \textbf{I want} to be able to make the system easily available through a standard domain name, \textbf{so that I can} improve my reach. & The web page is accessed on skalvi.no. & 100 \\
+SM.01 & \textbf{As a} system maintainer, \textbf{I want} to be able to make the system easily available through a standard domain name, \textbf{so that I can} improve my reach. & The web page is accessed on SkalVi.no. & 100 \\
 \hline
 SM.02 & \textbf{As a} system maintainer, \textbf{I want} to be able to secure my data, \textbf{so that}  users can trust me. & The system uses virtual provider server, therefor the system maintainer is the only one who has access to personal information. & 100\\
 \hline
@@ -201,8 +204,8 @@ SM.03  & \textbf{As a} system maintainer, \textbf{I want} be able to integrate w
 \label{User_Stories_General}
 \end{longtable}
  
-\section{Non-functional requirements}
-Non-functional requirements specifies how the system should perform on certain features \cite{requirements}. The non-functional requirements were defined by the customer.
+\section{Non-Functional Requirements}
+\textit{Non-functional requirements specifies criteria that can be used to judge the operation of a system, rather than specific behaviors} \cite{requirements}. The non-functional requirements were defined by the customer.
 
 \subsection{Open Source}
 Open source is defined as the source code to a product is made available to everyone. The code can be published under several licence agreements.
@@ -211,15 +214,15 @@ Open source is defined as the source code to a product is made available to ever
 The customer required that the product was published as open source under the licence Apache2. Apache2 is a licence that does not restrict the re-usage of the source code \cite{apache2}. The source code is available to all; it can be reused, further developed, and distributed as long as the required original notice follow the source code and is maintained. 
 
 \subsection{Server Availability}
-Server availability became a non-functional requirement in the Sprint 2 (see section \ref{sprint2}), when the customer requested that the latest functional version was available on www.skalvi.no at all times. The customer also wanted the server to be updated at least once a week, following the principles of the chosen methodology (see section \ref{methodology}). The group decided that the server would be updated two times a week, Wednesday and Fridays. As the group worked iteratively, according to the chosen development methodology, this request was incorporated in the working sprint. Furthermore, this revealed that changes to the architecture was required to avoid potential big problems; such as production- and development configuration, and class dependencies.
+Server availability became a non-functional requirement in the Sprint 2 (see section \ref{sprint2}), when the customer requested that the latest functional version was available on \url{www.SkalVi.no} at all times. The customer also wanted the server to be updated at least once a week, following the principles of the chosen methodology (see section \ref{methodology}). The group decided that the server would be updated two times a week, Wednesday and Fridays. As the group worked iteratively, according to the chosen development methodology, this request was incorporated in the current sprint. Furthermore, this revealed that changes to the architecture was required to avoid potential big problems; such as production- and development configuration, and class dependencies.
 
 \subsection{Security}
-As the web portal allowed users to register and log in, handling personal information in a good manner was considered as important. By using the user authentication system provided by the Django framework both user access and privacy were achieved. Allowing user to use Facebook accounts to log in was also a choice based on security, since Facebook is responsible for a secure log in.
+As the web portal allowed users to register and log in, handling personal information in a good manner was considered important. By using the user authentication system provided by the Django framework both user access and privacy were achieved. Allowing user to use Facebook accounts to log in was also a choice based on security, since Facebook handles secure log in.
 
 
 \subsection{Universal Design}
 \label{universalDesign}
-"Universal design means designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible, regardless of disability." \cite{Difi} Designing the web portal according to the universal design principles was one of the most specific requirements from the customer. As the intentional user group of www.skalvi.no is children with special needs, the group aimed to design the web portal following these principles. 
+\textit{Universal design means designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible, regardless of disability} \cite{Difi}. Designing the web portal according to the universal design principles was one of the most specific requirements from the customer. As the intended user group of SkalVi.no are children with special needs, the group aimed to design the web portal following these principles. 
 
 
 \subsection{Scalability}
@@ -227,25 +230,21 @@ At the beginning of the project the group consulted with the customer about scal
 
 
 \section{Changes to Requirements}
-During the development of the product there have been some changes to the requirements. These changes were all determined in consultation with the customer during the customer meetings (see section \ref{ss:customer_meetings}). 
-
-The most substantial change was how the product would allow communication between users on the web page, and how to provide the users the experience of a web society feeling. Instead of creating a forum where the users could communicate, as intentionally planned, it was decided to implement the possibility to comment each activity. This was a decision based on the concern of users bullying one another, and how this eventually should have been managed. Furthermore, since the product was to be developed as a proof of concept this issue should not be excessively time consuming, and providing the possibility to comment was considered to be sufficient. 
-
-Other changes to the requirements included providing the users a list of the providers from Aktørbasen (see section \ref{Aktordatabasen}), and implement the possibility to follow a provider and filter similarly to how the activities are filtered.  
+During the development of the product there have been some changes to the requirements. These changes were all decided with the customer during the customer meetings. The most substantial change was how the product would allow communication between users on the web page, and how to give the users the experience of a web society. Instead of creating a forum where the users could communicate, as intentionally planned, it was decided to implement the possibility to comment each activity. This was a decision based on the concern of users bullying one another, and how this eventually should have been managed. Furthermore, since the product was to be developed as a proof of concept this issue should not be excessively time consuming, and providing the possibility to comment was considered to be sufficient. Other changes to the requirements included providing the users a list of the providers from Aktørbasen (see section \ref{Aktordatabasen}). Thus, implement the possibility to filter and follow providers.
 
 \subsubsection{Additions}
 \label{additions}
-Due to the changes to the requirements there are some of the user stories which are added to the initial lists of stories. These are CH.04, CH.05, CH06, CH.06, PA.08 and PA.09 (see tables in section \ref{User stories}).
+Due to the changes to the requirements, there are some of the user stories which are added to the initial lists of stories. These are CH.04, CH.05, CH06, CH.06, PA.08 and PA.09 (see tables in section \ref{User stories}).
 
 \subsubsection{Removals}
 \label{removals}
-A few of the original user stories have been removed during the development (see table \ref{t:user_stories_removed}).
+A few of the original user stories were removed during the development (see table \ref{t:user_stories_removed}).
 
-User stories US.02 and CH.02 were removed as a consequence of the user stories added (see section \ref{additions}), as these replace each other.
+User stories US.02 and CH.02 were removed as a consequence of the user stories added, as these replace each other.
 
-PA.04 have been removed due to feedback from users during the focus group (see section \ref{focusGroup}). This was initially a requirement the users desired, but as there are rarely any assistants at the activities this was considered irrelevant.
+PA.04 has been removed due to feedback from users during the focus group (see section \ref{focusGroup}). This was initially a requirement the users desired, but as there are rarely any assistants at the activities this was considered irrelevant.
 
-PA.05 and PA.07 are user stories which are proposed in the further development (see section \ref{further_development}) of the product, but not included in the group's version. This was a decision the group reached because of the prioritization from the customer, as these two stories had a relatively low priority compared to most other stories. As the users had expressed the importance of the children's experience of the concept, and especially their desire for a portal where children can find activities they can attend without help, the user stories concerning this user group were the topmost priority throughout the development. 
+PA.05 and PA.07 are user stories which are proposed in the further development of the product, but not included in the group's version (see chapter \ref{further_development}). This was a decision the group made because of the prioritization from the customer, as these two stories had a relatively low priority compared to most other stories. As the users had expressed the importance of the children's experience of the concept, and especially their desire for a portal where children can find activities they can attend without help, the user stories concerning this user group were the topmost priority throughout the development. 
 
 \begin{longtable}{@{\extracolsep{\fill}}
                 |L{0.15\linewidth}

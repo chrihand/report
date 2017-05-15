@@ -1,82 +1,65 @@
 %===================================== CHAP 2 =================================
 
 \chapter{Prestudies - Product}
+This chapter elaborates the prestudies completed by the group, regarding the product. This includes input from the customer, a definition of product requirements and a discussion of existing solutions. 
 
 \section{Customer Input}
 \label{Customer input}
-During the first meeting with the customer, the group received input about the overall structure of the desired product (see appendix \ref{project_structure}), as well as the research required. The customer emphasized the fact that the project was a “Proof of Concept”, and that the group had to research utilizing universal design principles in web applications.
+During the first meeting with the customer, the group received input about the overall structure of the desired product, see Appendix \ref{project_structure}, as well as the research required. The customer emphasized the fact that the project was a proof of concept, and that the group had to research utilizing universal design principles in web applications.
 
-The application to be developed is a concept to show the possibilities of use in Trondheim municipality, with the possibility to be scaled up to a bigger user group. Trondheim municipality desires to easily allow parents and children to find, participate and master leisure activities. This user base represented a big group of users, and the project was therefore allocated resources to perform workshops and user tests though the customer.
+The application is to be developed as a concept, to show the possibilities for finding leisure activities suited for children with special needs in Trondheim municipality. This user base represents a big group, therefore the project was allocated resources to perform workshops and user tests through the customer.
 
-Both server development and graphical user interface was fundamental for the group to create the web portal the customer desired. The group had a relative free choice when it came to technology, but customer had an impact on the final decisions made.
+Both server development and graphical user interface were fundamental for the group to be able to create the web portal the customer desired. The group had a relative free choice when it came to technology, but the customer had the final word on the decisions made.
 
-The group was asked to make different name suggestions for the concept. After providing several proposals and consultation with the customer the final decision was "skalvi.no" (which is the Norwegian way of saying, "would you like to hang out").
+The group was asked to make different name suggestions for the concept. After providing several proposals and consultation with the customer the final decision was \textit{"SkalVi.no"}.
 
 \section{Research}
-During the prestudies thorough research had to be completed. This included investigating requirements, tools and existing solutions.
+During the prestudies thorough research had to be completed. This included investigating the different users requirements and the existing solutions offered today. The result of the research conducted is discussed in this section.
 
-Initially the group researched what type of methodology would suit the project, the customer and the group it self (see section \ref{methodology}). After this, the group researched what tools facilitated an effortless implementation of the methodology. The group members had a lot experience in using different tools, which opened for many opportunities for deciding what should be used (see section \ref{tools}).
-
-One of the requirements from the customer was that the web portal applied the principles of universal design (see section \ref{project_description}). This was an aspect few of the group members had prior experience with. Taking this into account the customer provided a resource, DIFI - Universal design principles \cite{Difi}. During the development process, design choices, such as focus marking and colours have been influenced on knowledge acquired utilizing this resource. 
-
-The customer provided several existing solutions  for the group to explore, providing an insight in which offers the users have today (see section \ref{alternativeSolutions}). To give the group the best possible understanding of the users' needs, there was arranged a workshop together with the users and the providers (see section \ref{WorkshopUserAndProviders}). 
+One of the requirements from the customer was that the web portal applied the principles of universal design. This was an aspect few of the group members had prior experience with. The customer provided a resource, \url{https://uu.difi.no}. It was utilized while making choices regarding the design of the paper prototype and graphical user interface (see section \ref{s:graphical_user_interface}). The customer presented several existing solutions for the group to explore, providing an insight in which offers the users have today and how this can be improved. 
 
 
 \subsection{Workshop With Users and Providers}
 \label{WorkshopUserAndProviders}
-During the researching phase; two of the group members, Andresen and Skaugvoll, attended a workshop to gather requirements the users had to the web portal. 
+During the research phase; two of the group members, Andresen and Skaugvoll, attended a workshop to gather requirements the users had to the web portal. The workshop was divided into two parts; one with the providers of the activities and system maintainers, and one with the children and parents who would use the web portal to find their respective activities. The workshop revealed different needs the users had for the web portal, especially emphasizing how these differed based on user type, while being accessible from the same portal. 
 
-The workshop was divided into two parts; one with the providers of the activities which are to be posted on the web portal, and one with the children and parents whom would use the web portal to find the respective activities. The workshop revealed different needs the users had to the web portal; especially emphasizing how these differed based on user type, while being accessible from the same portal. 
+Based on the knowledge Andresen and Skaugvoll acquired throughout the workshop, the group got a clearer idea of what should be developed. In turn, that led to the creation of functional and non-functional requirements (see section \ref{requirements}). See Appendix \ref{workshop_with_providers_and_system_maintainers} and \ref{workshop_with_families} for a summary of the workshop.
 
-Based on the knowledge Andresen and Skaugvoll acquired throughout the workshop, the group got a more definite idea of what should be developed and created functional and non-functional requirements (see section \ref{requirements}). See appendix \ref{workshop_with_providers_and_system_maintainers} and \ref{workshop_with_families} for a summary of the workshop.
-
-\section{Web-hotel vs. Web-server}
-\label{webhotel_vs_webserver}
-The options for the web portal platform were using a web-hotel or a web-server. The group had several meetings with the customer regarding this decision. The customer primarily wanted to use a web-hotel as hosting service and platform. The group proposed to use a web-server because of the many advantages, rather than the constraints with web-hotel. 
-
-The group suggested to use web-server because it allows for developing the graphical user interface faster and easier by allowing usage of libraries and frameworks, which a web-hotel does not. For that reason time and resources would be more efficiently allocated. Security is also higher with the use of web-server because it does not use a shared resource. If the web portal was hosted through a web-hotel, the security of the page and its information would only be only as  safe as the least secure web-page which use the same shared resource. Hosting on a web-server would provide more security for the users of the web portal, and since the application potentially holds sensitive information about the users, security is not to be taken for granted. 
-
-Both web-hotel and web-server were suited as platform for the web portal. The usage of web-server would contribute to an much easier development, and allow usage of the best suitable technology for the given task. The group was engaged in a meeting with the customer and an outside developer to present the usage of web-hotel vs. web-server. The group emphasized that the usage of web-server was a suggestion, and that it was up to the customer to make the final decision. Subsequently the customer decided to use web-server, according to the group's desire.
 
 \section{Existing Solutions}
 \label{alternativeSolutions}
-The targeted users of skalvi.no has only a limited amount of existing solutions to choose from when it comes to finding offered leisure activities. They are not satisfied with the existing solutions, because the activities offered are not easily accessible, and often lacks detailed and up to date information.  
+The targeted users of SkalVi.no have a limited amount of existing solutions to choose from when it comes to finding leisure activities. They are not satisfied with the existing solutions, because the activities offered are not easily accessible, and often lacks detailed and up to date information.  
 The contemporary solutions are TRDevents, KUBA, Beitostølen Helsesportsenter and GoSmart.
 
-\subsection{TRDevents}
-In Trondheim, TRDevents \cite{TRDevents} is the main portal to find activities and other events. Events and activities can be registered both by organizations and individuals. Their focus is to list all events in Trondheim, and to keep everyone updated about upcoming events and activities. 
+\subsubsection{TRDevents}
+In Trondheim, TRDevents is the main portal to find activities and other events. Events and activities can be registered both by organizations and individuals. Their focus is to list all events in Trondheim, and to keep everyone updated about upcoming events and activities \cite{TRDevents}. 
 
-TRDevent shows activities and events on their web page. The activities are divided into lists of 50 activities per page. If a user wants to see more, the user has to scroll through the entire page, and then load new activities by clicking a button. 
-This solution supports both searching, filtering by date and category, and the possibility to share on Facebook. For each activity and event, it is possible to export it to Google calendar and/or Apple calendar, and the user gets a representation of related events. 
+TRDevent shows activities and events on their web page. The activities are divided into lists of 50 activities per page. If a user wants to see more, the user has to scroll through the entire page, and then load new activities by clicking a button. This solution supports both searching, filtering by date and category, and the possibility to share on Facebook. For each activity and event, it is possible to export it to Google calendar and/or Apple calendar, and the user gets a representation of related events. However, this solution does not support any functionality regarding searching and finding leisure activities for children with special needs.
 
-However, this solution does not support any functionality regarding searching and finding leisure activities for children with special needs.
-
-\subsection{Kultur for Barn (KUBA)}
-A portal which aims towards this project's user group is KUBA \cite{KUBA}. KUBA stands for "Kultur for Barn" (Culture for children), and is Trondheim kommune's cultural program for children in all ages. KUBA strives to be as diverse and inclusive as possible, such that everyone can participate in their activities. KUBA is not a portal on its own, but a program offered by Trondhim kommune, and is therefore just a part of their website.
+\subsubsection{Kultur for Barn}
+Kultur for Barn (denoted as KUBA) is a portal aimed towards this project's user group. KUBA (Culture for children) is Trondheim kommune's cultural program for children of all ages. KUBA strives to be as diverse and inclusive as possible, so everyone can participate in their activities \cite{KUBA}. KUBA is not a portal on its own, but a program offered by Trondhim kommune, and is therefore just a part of their website. 
 
 KUBA displays their activities in a pdf-file linked on their web page, a solution which is difficult to update and maintain. Furthermore, they also use Facebook to advertise upcoming events. KUBA does not have any other functionalities.
 
-\subsection{Beitostølen Helsesportsenter}
-A national offer is Beitostølen Helsesportsenter (further denoted as BHSS) \cite{BHSS}. BHSS provides people in all ages with physical, psychological and/or cognitive disabilities the opportunity for rehabilitation through activities. The rehabilitation takes place at their center in Beitostølen, located in Øystre Slidre municipality. Their main focus is on opportunities rather than limitations.  
+\subsubsection{Beitostølen Helsesportsenter}
+A national offer is Beitostølen Helsesportsenter (denoted as BHSS). BHSS provides people in all ages with physical, psychological and/or cognitive disabilities the opportunity for rehabilitation through activities. The rehabilitation takes place at their center in Beitostølen, located in Øystre Slidre municipality. Their main focus is on opportunities rather than limitations \cite{BHSS}.  
 
 BHSS does not display their activities in any specific way, but as different opportunities by categories. To be able to attend these activities, users have to apply for a rehabilitation-stay through a doctor. BHSS has therefore no functionality like sign up on activities on their website.  
 
-\subsection{Go Smart}
-A offer outside of Norway that is similar to skalvi.no is Go Smart \cite{GoSart}. Go Smart is an initiative from The National Head Start Association (further denoted as NHSA) \cite{NHSA}, which is a non-profit organization in The United States that believes that every child, regardless of circumstances at birth, can succeed in life. Go Smart is not a web site where users can find and sign up for activities, but a model that families, teachers, providers and others can use to find ways to improve the health and development of young children up to the age of five.
+\subsubsection{Go Smart}
+An offer outside of Norway that is similar to SkalVi.no is Go Smart. Go Smart is an initiative from The National Head Start Association (denoted as NHSA) \cite{NHSA}, which is a non-profit organization in The United States that believes that every child, regardless of circumstances at birth, can succeed in life \cite{GoSart}. Go Smart is not a web site where users can find and sign up for activities, but a model that families, teachers, providers and others can use to find ways to improve the health and development of young children up to the age of five.
 
-Activities that is in Go Smart's model is displayed at their homepage with dynamic loading if the user wants to see more activities. Go Smart offers users to save their favorite activities, and filter and search for different activities. The site offers many ways to filter activities, like age, environment, group size and whether the activity is suitable for non-mobile children or not.
+Activities that is in Go Smart's model is displayed at their homepage with dynamic loading if the user wants to see more activities. Go Smart allows users to save their favorite activities, and filter and search for different activities. The site offers many ways to filter activities, like age, environment, group size and whether the activity is suitable for non-mobile children or not.
 
 \subsection{Comparison}
-The solutions are different in their own way. TRDevents is the most comparable solution to skalvi.no, with the intention to be a portal that gathers all activity offers in Trondheim, and when it comes to functionality. While TRDevents only displays 50 activities per page, skalvi.no displays all activities with dynamic loading. TRDevents has sharing-functionality with Facebook, which is not implemented on skalvi.no, but is suggested in further development (see section \ref{proposal_for_future_features}). TRDevents does not support filters or information for users with special needs, and therefore not convenient for this project's users. 
+TRDevents is the most comparable solution to SkalVi.no, with the intention to be a portal that gathers all activities offered in Trondheim, and  the intended functionality of SkalVi.no. While TRDevents only displays 50 activities per page, SkalVi.no want to give users the opportunity to view all activities on one single page. TRDevents has sharing-functionality with Facebook, this is a functionality the customer wants the group to implement into the web portal. One of the functional requirements for Skalvi.no is that users can use filters to find activities that suits their needs. TRDevents does not support this functionality, and therefore is not convenient for this project's users. 
 
-KUBA and BHSS are most alike skalvi.no when it comes to whom the product is intended for, but neither of them have functionality for finding leisure activities. Since this functionality is not implemented, it is much harder to find specific activities on their site compared to skalvi.no.
+KUBA and BHSS are most alike SkalVi.no when it comes to whom the product is intended for, but neither of them have functionality for finding leisure activities. Since this functionality is not implemented, it is complicated to find specific activities on their site compared to SkalVi.no.
 
-Go Smart is a good alternative if you are a provider, and want to find different activities you can offer to children. Since Go Smart is a model and skalvi.no is a portal, they do not offer the the same opportunities to the users. Both Go Smart and skalvi.no offers users the opportunity to log in with Facebook.
+Go Smart is a good alternative if you are a provider, and want to find different activities you can offer to children. Go Smart and SkalVi.no do not offer the the same opportunities to the users; as Go Smart offers suggestions on activities, while SkalVi.no is intended to offer leisure activities users can attend.
 
-A functionality that is implemented on skalvi.no, is family log in, a functionality that none of the other solutions have. Users can create one family-user and create multiple sub-profiles within the family. With this kind of functionality, a family can log in with one user name and password, and then choose which sub-profile they want to be. It is also possible to easily switch between the sub-profiles. With a family-user, parents are able to see what kind of activities their children are attending. For further development it is suggested to create a communication channel between the profiles of one user (see section \ref{proposal_for_future_features}).
+A functionality that the customer want the group to implement on SkalVi.no, is family log in, a functionality that none of the other solutions have. Users will be able to create one family-user and then create multiple sub-profiles within the family. With this kind of functionality, a family can log in with one user name and password, and then choose which sub-profile they want to use. It will also be possible to easily switch between the sub-profiles. With a family-user, parents will be able to see what kind of activities their children are attending. 
 
-Another functionality implemented in skalvi.no, is the opportunity to create activities on the portal with events that exists on Facebook. When a user logs in with Facebook, the user is able to create activities based on a Facebook-event that the user has been invited to, is interested in or is attending. Users can therefore easily create activities on skalvi.no, as all information and pictures from the Facebook-event will automatically be displayed.
-
-
+Another functionality that the customer want the group to implement, is the opportunity to create activities on the portal with events that exists on Facebook. When a user is logged in with Facebook, the user will be able to create activities based on a Facebook-event that the user has been invited to, is interested in or is attending. Users can therefore easily create activities on SkalVi.no, as all information and pictures from the Facebook-event will automatically be displayed.
 
 \cleardoublepage

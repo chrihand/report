@@ -1,25 +1,26 @@
 %===================================== CHAP 1 =================================
 
 \chapter{Introduction}
+This chapter contains an introduction to the course. Furthermore, each group member is introduced, the project is described and at last the customer is presented. 
 
 \section{Course}
-The course, IT2901 Informatics Project II, is a group project where students work in groups to carry out a software project \cite{EmneKode}. The project goal is for students to use experience from previous courses at Norwegian University of Science and Technology (denoted as NTNU) to develop a product for a real customer, and acquire new knowledge. The development process of this product is documented in this report.
+The course, IT2901 Informatics Project II, is a group project where students work in groups to carry out a software development project. The project goal is for students to gain practical experience with the development of a software process for a customer. The students will participate in the whole project life cycle \cite{EmneKode}. The development process of this product is documented in this report.
 
 
 \section{Group Members}
-The group consists of six members; Christina Hellenes Andresen, Andreas Norstein, Sigve André Evensen Skaugvoll, Ingrid Skar, Martin Stigen and Thomas Wold. The members started their Informatics Bachelor degree in August 2014, and has through the courses at NTNU acquired skills in both programming and software development methodologies.
+The group consists of six members; Christina Hellenes Andresen, Andreas Norstein, Sigve André Evensen Skaugvoll, Ingrid Skar, Martin Stigen and Thomas Wold. The members started their Bachelor of Science in informatics in August 2014, and has through the courses at Norwegian University of Science and Technology (denoted as NTNU)  acquired skills in both programming and software development methodologies.
 
 \subsubsection{Christina Hellenes Andresen}
 \label{christina}
-Andresen has prior experience in programming from courses taught at NTNU, with most experience in web development. She has knowledge about development methodologies, experience with testing and writing reports.
+Andresen has prior experience in programming from courses taught at NTNU, with most experience in web development. She has knowledge about development methodologies, writing reports, and experience with testing acquired from previous summer internships at Imatis AS.
 
 \subsubsection{Andreas Norstein}
 \label{andreas}
-Norstein has gained experience in programming from courses at NTNU and Queensland University of Technology (denoted as QUT), mainly about Java, Python, C\#/.NET, Nodejs and Javascript. He has additional experience with server setup and back end coding from courses at QUT, with focus on deployment to cloud services. 
+Norstein has gained experience in programming from courses at NTNU and Queensland University of Technology (denoted as QUT), mainly about Java, Python, C\#/.NET, Nodejs and Javascript. He has additional experience with server setup and backend coding from courses at QUT, with focus on deployment to cloud services. 
 
 \subsubsection{Sigve André Evensen Skaugvoll}
 \label{sigve}
-Skaugvoll has prior experience with Nodejs, Angular 2, Java and Python from courses taught during the Bachelor of Informatics at NTNU. He has knowledge about server and back end development, such as Nginx and web protocols. He does also have experience with testing, gained from other projects.
+Skaugvoll has prior experience with Nodejs, Angular 2, Java and Python from courses taught during the Bachelor of Informatics at NTNU. He has knowledge about server and backend development, such as Nginx and web protocols. He also has experience with testing, gained from other projects.
 
 \subsubsection{Ingrid Skar}
 Skar has acquired knowledge about programming, primarily in web development and graphical user interface including the Model View Controller pattern, from courses taught at NTNU and QUT. She also has knowledge about development methodologies, primarily agile. 
@@ -28,23 +29,42 @@ Skar has acquired knowledge about programming, primarily in web development and 
 Stigen started learning programming in high school. From courses taught at NTNU he has gained experience in Java, Python, databases and web development. He has spent much of his leisure time further developing these skills. Stigen has also worked as a student assistant multiple times in the programming courses TDT4100 and TDT4110.
 
 \subsubsection{Thomas Wold}
-Wold has gained experience in software security, databases and programming languages such as Java, Python and Javascript from courses taught at NTNU. Additionally he has gained experience in web development focusing on the front end library ReactJS. 
+Wold has experience in software security, databases and programming languages such as Java, Python and Javascript from courses taught at NTNU. Additionally he has gained experience in web development focusing on the front end library ReactJS. 
 
 \section{Project Description}
 \label{project_description}
-UngIT is a project that addresses the problem \textit{“Children with special needs often have difficulties finding and getting involved in leisure activities outside school”} \cite{SintefBachelorProjectDescription}. The project UngIT will outline the dissemination of existing leisure activities, identifying available technological welfare solutions, so that children with disabilities can easier participate in and master leisure activities. The activities are intended to support the individual habilitation and rehabilitation processes. \cite{SintefOnlineProjectDescription}.
+UngIT is a project that addresses the problem \textit{Children with special needs often have difficulties finding and getting involved in leisure activities outside school. This leads to social isolation} \cite{SintefBachelorProjectDescription}. The project UngIT outlines the dissemination of existing leisure activities, identifying available technological welfare solutions, so that children with disabilities can easier participate in and master leisure activities. The activities are intended to support the individual habilitation and rehabilitation processes. \cite{SintefOnlineProjectDescription}.
 
-This project is a part of UngIT. The given assignment is to develop a web portal for children with special needs between the age 10 to 15 years old, providing the opportunity to find and join leisure activities. The project customer is SINTEF Digital and Trondheim kommune. 
+This project is a part of UngIT. The assignment is to develop a web portal for children with special needs between the age of 10 to 15, providing the opportunity to find and join leisure activities. The project customer is SINTEF Digital and Trondheim kommune.
+The customer is also the product owner, and will be referred to as the customer throughout this report.
 
-The project is to be developed as a “Proof of Concept"; and will give difficulties regarding universal design, representing the correct data without excluding any members of the targeted audience, creating a social network and gathering all the data that is available in one portal. This requires the group to complete a substantial amount of research and user testing. The project also requires the group to consult with providers and potential users of the web portal to gather requirements. The impact of this project is a concept that potentially will provide activity providers one common portal for advertising leisure activities. Resulting in one web portal for children and parents to find activities.
+The project is to be developed as a proof of concept, and will possesses challenges with regards to universal design, representing the correct data without excluding any members of the targeted audience, creating a social network and gathering all the data that is available in one portal. This requires the group to conduct research, and complete user testing. This project has the possibility to be developed into a finalized product in the future, based on the proof of concept the group are developing.
 
-Application requirements are not given explicitly by customer, and should be defined through workshops with users and providers. Note that developing a common database for all the leisure activity providers and their activities is not part of the project, merely the possibility to connect to this type of database. 
+Application requirements are not given explicitly by the customer, and should be defined through workshops with families, providers and system maintainers. Note that developing a common database for all the providers and their activities is not part of the project, merely the possibility to connect to this type of database. 
 
 \section{Customers}
-Trondheim kommune \cite{TrondheimMunicipality}, is the product owner. Their focus is on the citizens and they have established the welfare technology program \cite{WelfareProgram} with the vision \textit{“Safe where you are!”}. The program goal is to develop and use welfare technology so that citizens can feel safe and experience success wherever they are.
+Trondheim kommune has focus on their citizens, and has established the welfare technology program with the vision \textit{Safe where you are!} \cite{WelfareProgram}. The goal of the program is to develop and use welfare technology so that citizens can feel safe and experience success wherever they are.
 
-SINTEF Digital \cite{SintefDigital}, is a research division at SINTEF. SINTEF Digital focuses on user-centered development and carries out research in Information and Communication Technology.
+SINTEF Digital is a research division at SINTEF. They focus on user-centered development and carries out research in Information and Communication Technology \cite{SintefDigital}. All communication concerning the project and product is performed either through email or meetings with Babak Farshichan, who works at SINTEF Digital.
 
-All communication concerning the project and product is performed either through email or meetings with Babak Farshichan, whom works at SINTEF Digital.
+
+\section{Definitions}
+This section defines terms used in this report. 
+
+\textbf{(Web) portal}: A web site that gathers information from different sources into one. 
+
+\textbf{(Leisure) activities}: Activities provided in Trondheim kommune, published on the web portal. 
+
+\textbf{(Leisure activities) providers}: All current providers of activities in Trondheim kommune.  
+
+\textbf{Family}: A user group of the web portal is families, they consist of both children and parents searching for leisure activities.
+
+\textbf{Provider}: Users who are advertising and hosting leisure activities in Trondheim kommune. 
+
+\textbf{System Maintainer}: A user who will maintain the web portal after delivery, and are able to add activities to the web portal.
+
+\textbf{User}: A user is a 
+
+\textbf{Profile}: 
 
 \cleardoublepage
